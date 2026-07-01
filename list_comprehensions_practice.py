@@ -14,6 +14,9 @@ TRANSACTIONS_DB = [
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
 
+new_list = [i["client"] for i in TRANSACTIONS_DB if i["status"]=="success"]
+print(new_list)
+
 # Ваш код для завдань нижче:
 raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 clean_names = [name.title() for name in raw_names]
