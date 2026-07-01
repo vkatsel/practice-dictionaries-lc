@@ -13,6 +13,21 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+#
+# success = []
+# for x in TRANSACTIONS_DB:
+#     if x["status"] == "success":
+#         success.append(x["client"])
+#
+# print(success)
+
+# success = [(trans["client"], trans["amount"]) for trans in TRANSACTIONS_DB if trans["status"] == "success"]
+# success = {trans["client"]: trans["amount"] for trans in TRANSACTIONS_DB if trans["status"] == "success"}
+#
+# print(success)
+
+big = [trans for trans in TRANSACTIONS_DB if trans["amount"] > 10000]
+print(big)
 
 # Ваш код для завдань нижче:
 #
