@@ -18,6 +18,9 @@ EMPLOYEE_DB = {
     }
 }
 
+print(f"Alices salary: {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
+
+
 # Ваш код для завдань нижче:
 
 #
@@ -34,3 +37,4 @@ EMPLOYEE_DB = {
 
 # phone = "991234567"
 # print(f"+38{phone:010d}")...
+
