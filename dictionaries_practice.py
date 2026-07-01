@@ -19,3 +19,6 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+avg = sum(grades.values())/len(grades)
+print(f"Average: {avg:.2f}")
