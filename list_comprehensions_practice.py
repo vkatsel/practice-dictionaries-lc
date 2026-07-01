@@ -22,3 +22,7 @@ print(clean_names)
 transactions = [1200, 15000, 450, 55000, 800]
 vip_transactions = [i for i in transactions if i>10000]
 print(vip_transactions)
+
+balances = [5000, -1000, 250, -500]
+new_balance = [i*1.1 if i<0 else i for i in balances]
+print(new_balance)
