@@ -20,21 +20,8 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+# Live Coding 3: Міні-БД компанії
 
-# Guided Practice: Профіль користувача
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile["phone"]="+380991234567"
-user_profile["is_premium"]=False
-user_profile.pop("discount")
-print(user_profile)
+print(f"Alice salary: {EMPLOYEE_DB['tech']['alice']['salary']}")
 
-# Guided Practice: Аналіз оцінок
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-mas=list(grades.values())
-sum=0
-for i in mas:
-    sum+=i
-avg=sum/len(mas)
-print(f"{avg:.2f}")
-phone = "991234567"
-print(f"+38{phone:010s}")
+
