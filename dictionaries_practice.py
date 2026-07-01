@@ -17,11 +17,24 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
-print(f"Alice Salary: {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
+# print(f"Alice Salary: {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
+#
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# del EMPLOYEE_DB["tech"]["charlie"]
+# print(EMPLOYEE_DB)
+
+total_salary = 0
+amount = 0
+for dep_name, people in EMPLOYEE_DB.items():
+    for name, data in people.items():
+        total_salary += data["salary"]
+        amount += 1
+print(total_salary/amount)
+
 
 # Ваш код для завдань нижче:
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-avg = sum(grades.values())/len(grades)
-print(f"Average: {avg:.2f}")
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# avg = sum(grades.values())/len(grades)
+# print(f"Average: {avg:.2f}")
 
 
