@@ -30,6 +30,7 @@ TRANSACTIONS_DB = [
 # data = [10, -5, 20, -1]
 # clean_data = [0 if x<0 else x for x in data]
 
-balances = [5000, -1000, 250, -500]
-new_balances = [i*1.1 if i<0 else i for i in balances]
-print(new_balances)
+# balances = [5000, -1000, 250, -500]
+# new_balances = [i*1.1 if i<0 else i for i in balances]
+# print(new_balances)
+
