@@ -14,4 +14,21 @@ TRANSACTIONS_DB = [
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
 
+new_list = [i["client"] for i in TRANSACTIONS_DB if i["status"]=="success"]
+print(new_list)
+
+new_list1 = [i for i in TRANSACTIONS_DB if i["amount"]>10000]
+print(new_list1)
+
 # Ваш код для завдань нижче:
+raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+clean_names = [name.title() for name in raw_names]
+print(clean_names)
+
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [i for i in transactions if i>10000]
+print(vip_transactions)
+
+balances = [5000, -1000, 250, -500]
+new_balance = [i*1.1 if i<0 else i for i in balances]
+print(new_balance)
