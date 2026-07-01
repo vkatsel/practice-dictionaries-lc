@@ -17,9 +17,18 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
-EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
-del EMPLOYEE_DB["tech"]["charlie"]
-print(EMPLOYEE_DB)
+total=0
+amount=0
+for dep in EMPLOYEE_DB:
+    for ludina in EMPLOYEE_DB[dep]:
+        sal=EMPLOYEE_DB[dep][ludina]["salary"]
+        total+=sal
+        amount+=1
+print(f'{total/amount}')
+
+# EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+# del EMPLOYEE_DB["tech"]["charlie"]
+# print(EMPLOYEE_DB)
 # print(EMPLOYEE_DB["tech"]["alice"]["salary"])
 # Ваш код для завдань нижче:
 # user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
