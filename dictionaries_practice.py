@@ -24,6 +24,15 @@ EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
 del EMPLOYEE_DB["tech"]["charlie"]
 print(EMPLOYEE_DB)
 
+total_salary = 0
+amount_p = 0
+for dep_name,people in EMPLOYEE_DB.items():
+    for name,data in people.items():
+        total_salary += data["salary"]
+        amount_p +=1
+print(total_salary/amount_p)
+
+
 # Ваш код для завдань нижче:
 user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
 user_profile["phone"] = "+380991234567"
