@@ -18,4 +18,4 @@ EMPLOYEE_DB = {
     }
 }
 
-# Ваш код для завдань нижче:
+print(f"Alise salary : {EMPLOYEE_DB['tech']['alice']['salary']}")
