@@ -14,4 +14,28 @@ TRANSACTIONS_DB = [
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
 
+
+
 # Ваш код для завдань нижче:
+
+success_people = [trans["client"] for trans in TRANSACTIONS_DB if trans["status"] == "success"]
+print(success_people)
+
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [name.title() for name in raw_names]
+# print(clean_names)
+
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [i for i in transactions if i > 10000]
+# print(vip_transactions)
+
+# numbers = [1, 2, 3]
+# doubled = [x*2 for x in numbers ]
+
+# data = [10, -5, 20, -1]
+# clean_data = [0 if x<0 else x for x in data]
+
+# balances = [5000, -1000, 250, -500]
+# new_balances = [i*1.1 if i<0 else i for i in balances]
+# print(new_balances)
+
