@@ -15,3 +15,7 @@ TRANSACTIONS_DB = [
 ]
 
 # Ваш код для завдань нижче:
+
+raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+good_names = [name.title() for name in raw_names]
+print(good_names)
