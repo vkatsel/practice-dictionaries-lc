@@ -13,5 +13,15 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
-
+TRANSACTIONS_DB1 = [trans["client"] for trans in TRANSACTIONS_DB if trans["status"] == "success" ]
+print(TRANSACTIONS_DB1)
 # Ваш код для завдань нижче:
+
+
+
+
+# balances = [5000, -1000, 250, -500]
+#
+# new_balances = [x if x>0 else x*1.1 for x in balances]
+# print(new_balances)
+
