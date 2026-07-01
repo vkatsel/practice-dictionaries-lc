@@ -20,3 +20,8 @@ TRANSACTIONS_DB = [
 raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 clean_names=[name.title() for name in raw_names]
 print(clean_names)
+
+# Guided Practice: Фільтрація VIP клієнтів (Тільки If)
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions=[pay for pay in transactions if pay >= 15000 and pay <= 55000]
+print(vip_transactions)
