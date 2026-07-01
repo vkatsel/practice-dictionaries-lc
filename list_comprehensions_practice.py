@@ -17,5 +17,5 @@ TRANSACTIONS_DB = [
 # Ваш код для завдань нижче:
 
 balances = [5000, -1000, 250, -500]
-new_balances = [a*1.1 if a<0 else a]
+new_balances = [a*1.1 if a<0 else a for a in balances]
 print(new_balances)
