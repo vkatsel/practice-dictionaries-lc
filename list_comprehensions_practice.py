@@ -28,4 +28,5 @@ TRANSACTIONS_DB = [
 # new_balances = [x if x >= 0 else x*1.1 for x in balances]
 # print(new_balances)
 
-
+b = [trans["client"] for trans in TRANSACTIONS_DB if trans["status"] == "success"]
+print(b)

@@ -25,13 +25,14 @@ EMPLOYEE_DB = {
 # del EMPLOYEE_DB['tech']['charlie']
 # print(EMPLOYEE_DB)
 
-total_salary = 0
-amount_p = 0
-for dep_name, people in EMPLOYEE_DB.items():
-    for name, person_data in people.items():
-        total_salary += person_data["salary"]
-        amount_p += 1
-print(f"Average salary: {total_salary/amount_p}")
+# total_salary = 0
+# amount_p = 0
+# for dep_name, people in EMPLOYEE_DB.items():
+#     for name, person_data in people.items():
+#         total_salary += person_data["salary"]
+#         amount_p += 1
+# print(f"Average salary: {total_salary/amount_p}")
+
 
 
 # user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
