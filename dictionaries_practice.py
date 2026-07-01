@@ -35,4 +35,6 @@ sum=0
 for i in mas:
     sum+=i
 avg=sum/len(mas)
-print(avg)
+print(f"{avg:.2f}")
+phone = "991234567"
+print(f"+38{phone:010s}")
