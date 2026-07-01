@@ -15,3 +15,27 @@ TRANSACTIONS_DB = [
 ]
 
 # Ваш код для завдань нижче:
+new_list=[i["client"] for i in TRANSACTIONS_DB if i["status"]=="success" ]
+print(new_list)
+
+new_list1=[i["client"] for i in TRANSACTIONS_DB if i["amount"]>10000 ]
+print(new_list1)
+
+
+
+
+raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+clean_names=[name.title() for name in raw_names]
+print(clean_names)
+
+
+
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions=[i for i in transactions if i>10000]
+print(vip_transactions)
+
+
+
+balances = [5000, -1000, 250, -500]
+new_balance=[x if x>=0 else x*1.1 for x in balances]
+print(new_balance)
