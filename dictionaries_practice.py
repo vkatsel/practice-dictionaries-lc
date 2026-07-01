@@ -21,6 +21,10 @@ EMPLOYEE_DB = {
 # Ваш код для завдань нижче:
 print(f"Alices salary: {EMPLOYEE_DB['tech']['alice']['salary']}")
 
+EMPLOYEE_DB['sales']['diana']['salary'] = 3500
+del EMPLOYEE_DB['tech']['charlie']
+print(EMPLOYEE_DB)
+
 
 # user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
 # user_profile["phone"] = "+380991234567"
