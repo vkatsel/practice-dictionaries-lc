@@ -16,8 +16,9 @@ TRANSACTIONS_DB = [
 
 # Ваш код для завдань нижче:
 success_people = [trans['client'] for trans in TRANSACTIONS_DB if trans["status"] == 'success']
+success_people_dic = {trans['client']:trans['amount'] for trans in TRANSACTIONS_DB if trans["status"] == 'success'}
 print(success_people)
-
+print(success_people_dic)
 
 # raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 # clean_names = [name.title() for name in raw_names]
