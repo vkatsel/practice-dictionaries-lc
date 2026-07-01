@@ -25,6 +25,7 @@ TRANSACTIONS_DB = [
 # print(vip_transactions)
 
 
-balances = [5000, -1000, 250, -500]
-new_balances = [x if x >= 0  else x*1.1 for x in balances]
-print(new_balances)
+# balances = [5000, -1000, 250, -500]
+# new_balances = [x if x >= 0  else x*1.1 for x in balances]
+# print(new_balances)
+
