@@ -18,6 +18,8 @@ EMPLOYEE_DB = {
     }
 }
 
+print(f"Alice salary : {EMPLOYEE_DB['tech']['alice']['salary']}")
+
 # Ваш код для завдань нижче:
 
 user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
@@ -28,4 +30,9 @@ print(user_profile)
 
 grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 average = sum(grades.values())/len(grades.values())
-print(average)
+print(f"Average: {average:.2f}")
+
+
+a = 1
+print(f"{a:06d}")
+
