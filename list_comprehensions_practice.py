@@ -14,6 +14,17 @@ TRANSACTIONS_DB = [
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
 
+success = []
+for tr in TRANSACTIONS_DB:
+    if tr["status"] == "success":
+        success.append(tr["client"])
+print(success)
+success_people = {trans["client"] : trans["amount"] for trans in TRANSACTIONS_DB if trans["status"] == "success"}
+print(success_people)
+
+
+
+
 # Ваш код для завдань нижче:
 
 # raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
@@ -24,6 +35,6 @@ TRANSACTIONS_DB = [
 # vip_transactions = [tran for tran in transactions if tran > 10000]
 # print(vip_transactions)
 
-balances = [5000, -1000, 250, -500]
-new_balance = [sum*1.1 if sum<0 else sum for sum in balances]
-print(new_balance)
+# balances = [5000, -1000, 250, -500]
+# new_balance = [sum*1.1 if sum<0 else sum for sum in balances]
+# print(new_balance)

@@ -18,18 +18,18 @@ EMPLOYEE_DB = {
     }
 }
 
-print(f"Alice salary : {EMPLOYEE_DB['tech']['alice']['salary']}")
-EMPLOYEE_DB['sales']['diana']['salary'] = 3500
-del EMPLOYEE_DB['tech']['charlie']
-print(EMPLOYEE_DB)
-
-salary_total = 0
-quantity = 0
-for dep_name, people in EMPLOYEE_DB.items():
-    for name, person_data in people.items():
-        salary_total += person_data["salary"]
-        quantity += 1
-print(f"Average salary : {salary_total/quantity:.2f}")
+# print(f"Alice salary : {EMPLOYEE_DB['tech']['alice']['salary']}")
+# EMPLOYEE_DB['sales']['diana']['salary'] = 3500
+# del EMPLOYEE_DB['tech']['charlie']
+# print(EMPLOYEE_DB)
+#
+# salary_total = 0
+# quantity = 0
+# for dep_name, people in EMPLOYEE_DB.items():
+#     for name, person_data in people.items():
+#         salary_total += person_data["salary"]
+#         quantity += 1
+# print(f"Average salary : {salary_total/quantity:.2f}")
 
 
 
