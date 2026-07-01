@@ -25,3 +25,8 @@ print(clean_names)
 transactions = [1200, 15000, 450, 55000, 800]
 vip_transactions=[pay for pay in transactions if pay >= 15000 and pay <= 55000]
 print(vip_transactions)
+
+# Live Coding 2: Нарахування штрафів (If-Else)
+balances = [5000, -1000, 250, -500]
+new = [pay*1.1 if pay <0 else pay for pay in balances]
+print(new)
