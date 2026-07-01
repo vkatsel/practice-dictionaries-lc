@@ -18,7 +18,6 @@ success = []
 for tr in TRANSACTIONS_DB:
     if tr["status"] == "success":
         success.append(tr["client"])
-print(success)
 success_people = {trans["client"] : trans["amount"] for trans in TRANSACTIONS_DB if trans["status"] == "success"}
 print(success_people)
 big_trans = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"]>10000]
