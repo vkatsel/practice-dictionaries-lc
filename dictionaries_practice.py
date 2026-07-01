@@ -30,4 +30,4 @@ print(user_profile)
 grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 value_grades=grades.values()
 average=sum(value_grades)/len(value_grades)
-print(average)
+print(f"Average: {average:.2f}")
