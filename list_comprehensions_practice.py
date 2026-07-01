@@ -18,6 +18,9 @@ TRANSACTIONS_DB = [
 new_list=[i["client"] for i in TRANSACTIONS_DB if i["status"]=="success" ]
 print(new_list)
 
+new_list1=[i["client"] for i in TRANSACTIONS_DB if i["amount"]>10000 ]
+print(new_list1)
+
 
 
 
