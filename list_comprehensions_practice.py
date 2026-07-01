@@ -20,6 +20,16 @@ TRANSACTIONS_DB = [
 # clean_names = [name.title() for name in raw_names]
 # print(clean_names)
 
-transactions = [1200, 15000, 450, 55000, 800]
-vip_transactions = [i for i in transactions if i > 10000]
-print(vip_transactions)
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [i for i in transactions if i > 10000]
+# print(vip_transactions)
+
+# numbers = [1, 2, 3]
+# doubled = [x*2 for x in numbers ]
+
+# data = [10, -5, 20, -1]
+# clean_data = [0 if x<0 else x for x in data]
+
+balances = [5000, -1000, 250, -500]
+new_balances = [i*1.1 if i<0 else i for i in balances]
+print(new_balances)
