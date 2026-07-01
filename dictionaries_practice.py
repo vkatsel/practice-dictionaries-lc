@@ -19,13 +19,13 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
-total_salary = 0
-amount_p = 0
-for dep_name, people in EMPLOYEE_DB.items():
-    for name, data in people.items():
-        total_salary += data["salary"]
-        amount_p += 1
-print(f"Average salary: {total_salary/amount_p}")
+# total_salary = 0
+# amount_p = 0
+# for dep_name, people in EMPLOYEE_DB.items():
+#     for name, data in people.items():
+#         total_salary += data["salary"]
+#         amount_p += 1
+# print(f"Average salary: {total_salary/amount_p}")
 
 # print(f"Alice salary: {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
 # EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
@@ -50,4 +50,5 @@ print(f"Average salary: {total_salary/amount_p}")
 #
 # phone = "0991234567"
 # print(f"+38{phone:10s}")
-#
+
+

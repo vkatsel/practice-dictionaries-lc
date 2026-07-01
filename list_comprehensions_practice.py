@@ -18,6 +18,8 @@ TRANSACTIONS_DB = [
 success_people = [[trans["client"],trans['amount']] for trans in TRANSACTIONS_DB if trans["status"] == "success"]
 success_people = {trans["client"]:trans['amount'] for trans in TRANSACTIONS_DB if trans["status"] == "success"}
 print(success_people)
+TRANSACTIONS_DB = [x for x in TRANSACTIONS_DB if x["amount"] >= 10000]
+print(TRANSACTIONS_DB)
 
 # raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 # clean_names = [name.title() for name in raw_names]
