@@ -23,6 +23,6 @@ TRANSACTIONS_DB = [
 # transactions = [1200, 15000, 450, 55000, 800]
 # vip_transactions =[vip for vip in transactions if vip>10000]
 # print(vip_transactions)
-balances = [5000, -1000, 250, -500]
-new_balances = [x if x>=0 else  x*1.1 for x in balances]
-print(new_balances)
+# balances = [5000, -1000, 250, -500]
+# new_balances = [x if x>=0 else  x*1.1 for x in balances]
+# print(new_balances)
