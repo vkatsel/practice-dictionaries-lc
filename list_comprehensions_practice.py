@@ -13,7 +13,8 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
-
+status_suc=[trans["client"] for trans in TRANSACTIONS_DB if trans["status"]=="success"  ]
+print(status_suc)
 # Ваш код для завдань нижче:
 
 # raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
