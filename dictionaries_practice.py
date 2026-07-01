@@ -29,7 +29,7 @@ for dep_name, people in EMPLOYEE_DB.items():
     for name, data in people.items():
         total_salary += data["salary"]
         amount += 1
-print(total_salary/amount)
+print(f"Average salary: {total_salary/amount}")
 
 
 # Ваш код для завдань нижче:
