@@ -19,6 +19,10 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+print(f"Alice salary: {EMPLOYEE_DB['tech']['alice']['salary']}")
+
+
+
 # user_profile = {"username": "cinema_fan",
 #                 "is_premium": True,
 #                 "discount": 15
@@ -30,9 +34,10 @@ EMPLOYEE_DB = {
 # print(user_profile)
 
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-pure_grades = list(grades.values())
-avarage = sum(pure_grades)/len(pure_grades)
-print(f"Average grade: {avarage:.2f}")
-a = 1
-print(f"{a:06d}")
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# pure_grades = list(grades.values())
+# avarage = sum(pure_grades)/len(pure_grades)
+# print(f"Average grade: {avarage:.2f}")
+# a = 1
+# print(f"{a:06d}")
+
