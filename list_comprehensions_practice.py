@@ -16,6 +16,8 @@ TRANSACTIONS_DB = [
 active_clients = [trans["client"] for trans in TRANSACTIONS_DB if trans["status"] == "success"]
 print(active_clients)
 
+big_trans = [trans for trans in TRANSACTIONS_DB if trans["amount"]>10000]
+print(big_trans)
 
 # Ваш код для завдань нижче:
 # raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
