@@ -16,6 +16,20 @@ TRANSACTIONS_DB = [
 
 # Ваш код для завдань нижче:
 
+#  Live Coding 3: Пошук активних клієнтів
+success = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"
+]
+success_dict = {transaction["client"]: transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"
+}
+# for transaction in TRANSACTIONS_DB:
+#     if transaction["status"] == "success":
+#         success.append(transaction['client'])
+print(success, success_dict)
+
+# Guided Practice: Великі транзакції
+NEW_TRANSACTIONS = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] >10000]
+print(NEW_TRANSACTIONS)
+
 # Guided Practice: Очищення текстів
 raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 clean_names=[name.title() for name in raw_names]
