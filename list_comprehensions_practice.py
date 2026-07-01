@@ -15,3 +15,32 @@ TRANSACTIONS_DB = [
 ]
 
 # Ваш код для завдань нижче:
+
+#  Live Coding 3: Пошук активних клієнтів
+success = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"
+]
+success_dict = {transaction["client"]: transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"
+}
+# for transaction in TRANSACTIONS_DB:
+#     if transaction["status"] == "success":
+#         success.append(transaction['client'])
+print(success, success_dict)
+
+# Guided Practice: Великі транзакції
+NEW_TRANSACTIONS = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] >10000]
+print(NEW_TRANSACTIONS)
+
+# Guided Practice: Очищення текстів
+raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+clean_names=[name.title() for name in raw_names]
+print(clean_names)
+
+# Guided Practice: Фільтрація VIP клієнтів (Тільки If)
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions=[pay for pay in transactions if pay >= 15000 and pay <= 55000]
+print(vip_transactions)
+
+# Live Coding 2: Нарахування штрафів (If-Else)
+balances = [5000, -1000, 250, -500]
+new = [pay*1.1 if pay <0 else pay for pay in balances]
+print(new)
