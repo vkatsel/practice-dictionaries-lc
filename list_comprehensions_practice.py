@@ -16,8 +16,6 @@ TRANSACTIONS_DB = [
 
 # Ваш код для завдань нижче:
 
-raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
-
-new_name = [name.title() for name in raw_names]
-
-print(new_name)
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [a for a in transactions if a>10000]
+print(vip_transactions)
