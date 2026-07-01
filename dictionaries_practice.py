@@ -17,6 +17,7 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
+print(f"Alices salary : {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
 
 # Ваш код для завдань нижче:
 
@@ -25,7 +26,8 @@ EMPLOYEE_DB = {
 # user_profile["is_premium"] = False
 # user_profile.pop("discount")
 # print(user_profile)
+#
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# average_grade = sum(grades.values()) / len(grades)
+# print(average_grade)
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-average_grade = sum(grades.values()) / len(grades)
-print(average_grade)
