@@ -20,9 +20,23 @@ EMPLOYEE_DB = {
 
 # Ваш код для завдань нижче:
 
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+#
+# user_profile["phone"] = "+380991234567"
+# user_profile["is_premium"] = False
+# user_profile.pop("discount")
+# print(user_profile)
+#
+#
+# print(user_profile.values())
 
-user_profile["phone"] = "+380991234567"
-user_profile["is_premium"] = False
-user_profile.pop("discount")
-print(user_profile)
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+new_grades = list(grades.values())
+average = sum(new_grades) / len(new_grades)
+print(average)
+
+phone = "991234567"
+print(f"+38{phone:10s}")
+
+
+
