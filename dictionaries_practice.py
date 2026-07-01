@@ -17,7 +17,10 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
-print(f"Alices salary : {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
+# print(f"Alices salary : {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# del EMPLOYEE_DB["tech"]["charlie"]
+# print(EMPLOYEE_DB)
 
 # Ваш код для завдань нижче:
 
@@ -31,3 +34,10 @@ print(f"Alices salary : {EMPLOYEE_DB["tech"]["alice"]["salary"]}")
 # average_grade = sum(grades.values()) / len(grades)
 # print(average_grade)
 
+total_salary = 0
+amount_p = 0
+for dep_name, people in EMPLOYEE_DB.items():
+    for name, person_data in people.items():
+        total_salary += person_data["salary"]
+        amount_p += 1
+print(f"Average salary: {total_salary/amount_p}")
