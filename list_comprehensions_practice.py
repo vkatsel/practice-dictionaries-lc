@@ -15,6 +15,12 @@ TRANSACTIONS_DB = [
 ]
 
 # Ваш код для завдань нижче:
+new_list=[i["client"] for i in TRANSACTIONS_DB if i["status"]=="success" ]
+print(new_list)
+
+
+
+
 raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 clean_names=[name.title() for name in raw_names]
 print(clean_names)
