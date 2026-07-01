@@ -16,6 +16,6 @@ TRANSACTIONS_DB = [
 
 # Ваш код для завдань нижче:
 
-transactions = [1200, 15000, 450, 55000, 800]
-vip_transactions = [a for a in transactions if a>10000]
-print(vip_transactions)
+balances = [5000, -1000, 250, -500]
+new_balances = [a*1.1 if a<0 else a]
+print(new_balances)
