@@ -17,6 +17,9 @@ TRANSACTIONS_DB = [
 new_list = [i["client"] for i in TRANSACTIONS_DB if i["status"]=="success"]
 print(new_list)
 
+new_list1 = [i for i in TRANSACTIONS_DB if i["amount"]>10000]
+print(new_list1)
+
 # Ваш код для завдань нижче:
 raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 clean_names = [name.title() for name in raw_names]
