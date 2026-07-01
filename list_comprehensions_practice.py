@@ -19,3 +19,7 @@ TRANSACTIONS_DB = [
 raw_names = ["aLice", "BOB", "charlie", "dIANA"]
 clean_names = [name.title() for name in raw_names]
 print(clean_names)
+
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [i for i in transactions if i > 10000]
+print(vip_transactions)
