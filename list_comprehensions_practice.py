@@ -21,6 +21,8 @@ for tr in TRANSACTIONS_DB:
 print(success)
 success_people = {trans["client"] : trans["amount"] for trans in TRANSACTIONS_DB if trans["status"] == "success"}
 print(success_people)
+big_trans = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"]>10000]
+print(big_trans)
 
 
 
