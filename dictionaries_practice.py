@@ -25,3 +25,7 @@ user_profile["phone"] = "+380991234567"
 user_profile["is_premium"] = False
 user_profile.pop("discount")
 print(user_profile)
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+average = sum(grades.values())/len(grades.values())
+print(average)
