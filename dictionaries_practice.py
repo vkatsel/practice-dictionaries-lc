@@ -19,3 +19,32 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+# print(f"Alices salary: {EMPLOYEE_DB['tech']['alice']['salary']}")
+#
+# EMPLOYEE_DB['sales']['diana']['salary'] = 3500
+# del EMPLOYEE_DB['tech']['charlie']
+# print(EMPLOYEE_DB)
+
+# total_salary = 0
+# amount_p = 0
+# for dep_name, people in EMPLOYEE_DB.items():
+#     for name, person_data in people.items():
+#         total_salary += person_data["salary"]
+#         amount_p += 1
+# print(f"Average salary: {total_salary/amount_p}")
+
+
+
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"] = "+380991234567"
+# user_profile["is_premium"] = False
+# user_profile.pop("discount")
+# print(user_profile)
+
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# b = list(grades.values())
+# average = sum(b) / len(b)
+# print(f"Average grade: {average:.2f}")
+# phone = 991234567
+# print(f"+38{phone:010d}")
+
