@@ -18,6 +18,8 @@ EMPLOYEE_DB = {
     }
 }
 
+print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+
 # Ваш код для завдань нижче:
 user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
 user_profile["phone"] = "+380991234567"
