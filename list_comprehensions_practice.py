@@ -15,7 +15,15 @@ TRANSACTIONS_DB = [
 ]
 
 # Ваш код для завдань нижче:
+#
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [name.title() for name in raw_names]
+# print(clean_names)
 
-raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
-clean_names = [name.title() for name in raw_names]
-print(clean_names)
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip = [trans for trans in transactions if trans>10000]
+# print(vip)
+
+balances = [5000, -1000, 250, -500]
+new_balances = [bal if bal>0 else bal*1.1 for bal in balances]
+print(new_balances)
