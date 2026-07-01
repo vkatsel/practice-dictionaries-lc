@@ -15,3 +15,31 @@ TRANSACTIONS_DB = [
 ]
 
 # Ваш код для завдань нижче:
+big_trans_dic = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] > 10000]
+print(big_trans_dic)
+
+
+
+# success_people = [trans['client'] for trans in TRANSACTIONS_DB if trans["status"] == 'success']
+# success_people_dic = {trans['client']:trans['amount'] for trans in TRANSACTIONS_DB if trans["status"] == 'success'}
+# print(success_people)
+# print(success_people_dic)
+
+
+
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [name.title() for name in raw_names]
+# print(clean_names)
+
+
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [tran for tran in transactions if tran>10000]
+# print(vip_transactions)
+
+
+# balances = [5000, -1000, 250, -500]
+# # new_balances = [x if x >= 0 else x*1.1 for x in balances]
+# new_balances = [bl*0.1+bl if bl<0 else bl for bl in balances]
+# print(new_balances)
+
+
