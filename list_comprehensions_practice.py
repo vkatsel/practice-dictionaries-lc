@@ -1,17 +1,26 @@
 # ==========================================
-# БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
-# Використовується для Практичної №2
+# ДАНІ ДЛЯ ОБРОБКИ (СПИСКИ РЯДКІВ)
+# Використовується для Практичної №1
 # ==========================================
 
-TRANSACTIONS_DB = [
-    {"id": 1, "client": "Alice", "amount": 1200, "category": "Electronics", "status": "success"},
-    {"id": 2, "client": "Bob", "amount": 450, "category": "Groceries", "status": "success"},
-    {"id": 3, "client": "Charlie", "amount": -150, "category": "Refund", "status": "success"},
-    {"id": 4, "client": "Diana", "amount": 55000, "category": "Auto", "status": "pending"},
-    {"id": 5, "client": "Eve", "amount": 800, "category": "Electronics", "status": "failed"},
-    {"id": 6, "client": "Frank", "amount": 200, "category": "Groceries", "status": "success"},
-    {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
-    {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
+SERVER_LOGS = [
+    "INFO: User logged in",
+    "ERROR: Connection timeout",
+    "DEBUG: Query executed",
+    "ERROR: Database locked",
+    "WARNING: High memory usage",
+    "ERROR: File not found",
+    "INFO: User logged out"
+]
+
+RAW_PRICES = [
+    "$10.50",
+    "€20.00",
+    "$15.99",
+    "invalid",
+    "$5.00",
+    "$120.00",
+    "N/A"
 ]
 
 # Ваш код для завдань нижче:
