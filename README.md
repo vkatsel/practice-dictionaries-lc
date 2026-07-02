@@ -1,18 +1,21 @@
-﻿# Practice: Dictionaries & List Comprehensions
+# 📊 Practice: List Comprehensions & Dictionaries
 
-Цей репозиторій містить матеріали для двох практичних занять курсу Economics/Business Data.
+Цей репозиторій містить практичні завдання для курсу **Economics & Big Data**.
 
-## Інструкція
+## 🚀 Інструкція до виконання
 
 1. Зробіть **Fork** цього репозиторію на свій GitHub акаунт.
 2. Склонуйте ваш форк на локальний комп'ютер.
-3. Виконуйте завдання у відповідних \.py\ файлах.
-4. Після завершення, зробіть **Commit** та **Push** змін.
-5. Відкрийте **Pull Request** у цей оригінальний репозиторій для здачі завдання.
+3. Створіть нову гілку у форматі `practice-[group-X]-[your-name]`.
+4. Виконуйте завдання у відповідних файлах:
+   - `list_comprehensions_practice.py`
+   - `dictionaries_practice.py`
+5. Після завершення, зробіть **Commit** та **Push** змін.
+6. Відкрийте **Pull Request** у цей оригінальний репозиторій для здачі завдання.
 
-## Матеріали
+## 📚 Матеріали
 
-- [Словники: Робота з даними за ключем](https://vadymkatsel.github.io/programming-concepts/courses/ebd-course/modules/dictionaries-ps.html)
-- [List Comprehensions: Ефективна обробка даних](https://vadymkatsel.github.io/programming-concepts/courses/ebd-course/modules/dictionaries-ps.html)
+- 📝 List Comprehensions: Ефективна обробка даних
+- 📖 Словники: Робота з даними за ключем
 
-Успіхів!
+Успіхів! 🎓
