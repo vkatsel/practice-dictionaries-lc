@@ -50,3 +50,9 @@ print(high_amounts)
 
 data = [10, -5, 20, -1]
 clean_data = [0 if x < 0 else x for x in data]
+
+error_logs=[log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
+print(error_logs)
+
+valid_prices=[float(price[1:]) for price in RAW_PRICES if price.startswith("$")]
+print(valid_prices)
