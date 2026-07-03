@@ -65,6 +65,18 @@ total=0
 for i in grades.values():
     total+=i
 print(total/len(grades))
+
+alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
+total=0
+count=0
+for dep in EMPLOYEE_DB.values():
+    for guy in dep.values():
+        total+=guy["salary"]
+        count+=1
+averag=total/count
+print("Average salary: "+str(averag))
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
