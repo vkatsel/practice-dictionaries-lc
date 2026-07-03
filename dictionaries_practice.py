@@ -74,3 +74,18 @@ print(salary_total/employee_count)
 EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
 EMPLOYEE_DB["tech"].pop("charlie")
 print(EMPLOYEE_DB)
+
+active_clients=[p["client"] for p in TRANSACTIONS_DB if p["status"]=="success"]
+print(active_clients)
+
+high_value_transactions=[p for p in TRANSACTIONS_DB if p["amount"]>10000]
+print(high_value_transactions)
+
+refunds=[p["amount"] for p in TRANSACTIONS_DB if p["category"]=="Refund"]
+print(refunds)
+
+total_revenue=[p["amount"] for p in TRANSACTIONS_DB if p["amount"]>=0 and p["status"]=="success"]
+print(sum(total_revenue))
+
+blacklist=[p["client"] for p in TRANSACTIONS_DB if p["status"]=="failed"]
+print(blacklist)
