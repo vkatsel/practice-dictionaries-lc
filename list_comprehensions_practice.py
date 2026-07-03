@@ -48,6 +48,19 @@ RAW_PRICES = [
 #
 # status_bank = "good" if sum(balances) > 3000 else "bad"
 # print(f"status_bank:{status_bank}")
-transactions = [1200, 15000, 450, 55000, 800]
-vip_transactions = [i for i in transactions if i > 10000]
-print(vip_transactions)
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [i for i in transactions if i > 10000]
+# print(vip_transactions)
+# SERVER_LOGS = [
+#     "INFO: User logged in",
+#     "ERROR: Connection timeout",
+#     "DEBUG: Query executed",
+#     "ERROR: Database locked",
+# ]
+# cleand_messages = [  log.replace("ERROR", "").strip() for log in SERVER_LOGS if log.startswith("ERROR")]
+# print(cleand_messages)
+
+New_prices =[float(i[1:]) for i in RAW_PRICES if i.startswith("$")]
+print(New_prices)
+
+
