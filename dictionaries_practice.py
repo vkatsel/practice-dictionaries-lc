@@ -35,3 +35,57 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+
+menu = {"Latte": 60, "Americano": 40}
+print(menu["Americano"])
+menu["Latte"]=70
+menu["Capuccino"]=50
+print(menu.get("Flat white", "Not available"))
+
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -= 1
+product["price"] *= 1.1
+print(product)
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"]="+380991234567"
+user_profile["is_premium"]="False"
+user_profile.pop("discount")
+print(user_profile)
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+print(sum(expenses.values()))
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+print(sum(grades.values())/len(grades.values()))
+
+alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
+salary_total=0
+employee_count=0
+for dep in EMPLOYEE_DB.values():
+    for employee in dep.values():
+        salary_total += employee["salary"]
+        employee_count += 1
+print(salary_total/employee_count)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
+active_clients=[p["client"] for p in TRANSACTIONS_DB if p["status"]=="success"]
+print(active_clients)
+
+high_value_transactions=[p for p in TRANSACTIONS_DB if p["amount"]>10000]
+print(high_value_transactions)
+
+refunds=[p["amount"] for p in TRANSACTIONS_DB if p["category"]=="Refund"]
+print(refunds)
+
+total_revenue=[p["amount"] for p in TRANSACTIONS_DB if p["amount"]>=0 and p["status"]=="success"]
+print(sum(total_revenue))
+
+blacklist=[p["client"] for p in TRANSACTIONS_DB if p["status"]=="failed"]
+print(blacklist)
