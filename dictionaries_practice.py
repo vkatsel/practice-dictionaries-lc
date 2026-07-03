@@ -3,21 +3,6 @@
 # Використовується для Практичної №1
 # ==========================================
 
-EMPLOYEE_DB = {
-    "tech": {
-        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
-        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
-        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
-    },
-    "sales": {
-        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
-        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
-    },
-    "hr": {
-        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
-    }
-}
-
 # Ваш код для завдань нижче:
 
 # ==========================================
@@ -62,3 +47,28 @@ TRANSACTIONS_DB = [
 
 # grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 # print(f"Average grade: {sum(grades.values())/len(grades)}")
+
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
+
+EMPLOYEE_DB = {
+    "tech": {
+        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+    },
+    "sales": {
+        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+    },
+    "hr": {
+        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+    }
+}
+total_salary=0
+total_employee=0
+for department in EMPLOYEE_DB.values():
+    total_employee += len(department)
+
+    for employee in department:
+        total_salary += department[employee]["salary"]
+print(total_salary)
