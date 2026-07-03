@@ -93,3 +93,22 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+active_clients = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(active_clients)
+
+
+high_value_transactions = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] > 10000]
+print(high_value_transactions)
+
+
+refunds = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
+print(refunds)
+
+
+total_revenue = [transaction["amount"] for transaction in TRANSACTIONS_DB if  transaction["status"] == "success" and transaction["amount"] > 0]
+print(sum(total_revenue))
+
+
+blacklist = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]
+print(blacklist)
