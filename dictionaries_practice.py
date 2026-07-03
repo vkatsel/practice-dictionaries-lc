@@ -38,15 +38,24 @@ TRANSACTIONS_DB = [
 
 
 
+#
+# menu = {"Latte": 60, "Americano": 40}
+# americano_price = menu["Americano"]
+# print(americano_price)
+#
+# menu["Latte"]=70
+# menu["Cappuccino"]=65
+#
+# print(menu)
+#
+# print(menu.get("Flat White", "Nema"))
 
-menu = {"Latte": 60, "Americano": 40}
-americano_price = menu["Americano"]
-print(americano_price)
 
-menu["Latte"]=70
-menu["Cappuccino"]=65
 
-print(menu)
+product = {"name": "Laptop", "price": 1000, "stock": 15}
 
-print(menu.get("Flat White", "Nema"))
+product["stock"] -=1
+
+product["price"]*=1.1
+print(product)
 
