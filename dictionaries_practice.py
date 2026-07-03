@@ -19,7 +19,24 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+alice = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(f"Alice salary is: {alice}")
 
+total_salary = 0
+total_employees = 0
+for key, depar in EMPLOYEE_DB.items():
+    total_employees += len(depar)
+    depar_sal = 0
+
+    for employee in depar:
+        total_salary += depar[employee]["salary"]
+        depar_sal += depar[employee]["salary"]
+
+    print(f"Salary for {key}: {depar_sal / len(depar)}")
+
+print(f"Total salary for al departs: {total_salary / total_employees}")
+
+# for department, employee in EMPLOYEE_DB.
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
@@ -55,3 +72,23 @@ TRANSACTIONS_DB = [
 #
 # removed = user_profile.pop("discount")
 # print(f"Updated profile is: {user_profile}", removed)
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+print(sum(list(expenses.values())))
+
+suma = 0
+for expense in expenses.values():
+    suma += expense
+print(f"The sum is: {suma}")
+
+# ```````````````============Guided Practice: Аналіз оцінок=============```````````````
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+total = 0
+# print(sum(list(grades.values())))
+for grade in grades.values():
+    total += grade
+
+average = total/len(grades)
+print(average)
+
