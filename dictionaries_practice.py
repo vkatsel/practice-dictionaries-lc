@@ -36,6 +36,14 @@ user_profile["is_premium"] = False
 user_profile.pop("discount")
 print(user_profile)
 
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+total = 0
+for ex in expenses.values():
+    total += ex
+print(f"Total expenses: {total}")
+
+total = sum(expenses.values())
+
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
