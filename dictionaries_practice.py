@@ -17,7 +17,15 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
-
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+salarytotal = 0
+employeecount = 0
+for dep in EMPLOYEE_DB.values():
+    for employee in dep.values():
+        salarytotal += employee["salary"]
+        employeecount += 1
+print(salarytotal/employeecount)
 # Ваш код для завдань нижче:
 
 # ==========================================
@@ -59,24 +67,24 @@ TRANSACTIONS_DB = [
 #user_profile.pop('discount')
 #print(user_profile)
 
-expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
-total = 0
-for ex in expenses.values():
-    total += ex
-print(total)
-total = sum(expenses.values())
-print(total)
+#expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+#total = 0
+#for ex in expenses.values():
+    #total += ex
+#print(total)
+#total = sum(expenses.values())
+#print(total)
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+#grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 
-avggrade = sum(grades.values())/len(grades)
-print(avggrade)
+#avggrade = sum(grades.values())/len(grades)
+#print(avggrade)
 
-totalgrades = 0
-counter = 0
-for grade in grades.values():
-    totalgrades += grade
-    counter += 1
-avggrade = totalgrades/counter
-avggrade = totalgrades/len(grades)
-print(avggrade)
+#totalgrades = 0
+#counter = 0
+#for grade in grades.values():
+    #totalgrades += grade
+    #counter += 1
+#avggrade = totalgrades/counter
+#avggrade = totalgrades/len(grades)
+#print(avggrade)
