@@ -46,6 +46,17 @@ grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 average = sum(grades.values())/len(grades)
 print(f"Average grade: {average}")
 
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
+salary_total=0
+employee_count = 0
+for department in EMPLOYEE_DB.values():
+    for employee in department.values():
+        salary_total += employee["salary"]
+        employee_count += 1
+
+print(f"Average salary: {salary_total/employee_count}")
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
