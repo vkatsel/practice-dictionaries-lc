@@ -35,8 +35,11 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
-#
+
 # menu = {"Latte": 60, "Americano": 40}
+# # flat_white = menu.get("Flat White", "Такого напою немає в меню")
+# # print(flat_white)
+#
 # print(f"Americano: {menu['Americano']}")
 #
 # menu["Latte"] = 70
@@ -48,8 +51,14 @@ TRANSACTIONS_DB = [
 # product["price"]=1100
 # print(product)
 
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile["phone"]= "+380991234567"
-user_profile["is_premium"] = False
-user_profile.pop("discount")
-print(user_profile)
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"]= "+380991234567"
+# user_profile["is_premium"] = False
+# user_profile.pop("discount")
+# print(user_profile)
+
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+# print(sum(expenses.values()))
+
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# print(f"Average grade: {sum(grades.values())/len(grades)}")
