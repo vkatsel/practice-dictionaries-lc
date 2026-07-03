@@ -37,20 +37,40 @@ TRANSACTIONS_DB = [
 ]
 
 
-menu = {"Latte": 60, "Americano": 40}
-print(f"Americano: {menu["Americano"]}")
-menu["Latte"] = 70
-menu["Flat White"] = 65
-print(f"Updated dict: {menu}")
+# menu = {"Latte": 60, "Americano": 40}
+# print(f"Americano: {menu["Americano"]}")
+# menu["Latte"] = 70
+# menu["Flat White"] = 65
+# print(f"Updated dict: {menu}")
+#
+#
+# product = {"name": "Laptop", "price": 1000, "stock": 15}
+# product["price"] *= 1.1
+# product["stock"] -= 1
+# print(f"Updated product: {product}")
+#
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["is_premium"] = False
+# user_profile["phone"] = +380991234567
+# new = user_profile.pop("discount")
+# print(f"Updated user profile: {user_profile}")
 
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+print(sum(list(expenses.values())))
 
-product = {"name": "Laptop", "price": 1000, "stock": 15}
-product["price"] *= 1.1
-product["stock"] -= 1
-print(f"Updated product: {product}")
+print(sum(expenses.values()))
 
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile["is_premium"] = False
-user_profile["phone"] = +380991234567
-new = user_profile.pop("discount")
-print(f"Updated user profile: {user_profile}")
+suma = 0
+for expense in expenses.values():
+    suma += expense
+print(f"The sum of the expenses is {suma}")
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+suma = 0
+for grade in grades.values():
+    suma += grade
+ave = suma/len(grades)
+print(f"The average grade is {ave}")
+
+print(sum(grades.values())/len(grades))
+
