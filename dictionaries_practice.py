@@ -19,40 +19,20 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
-menu = {"Latte": 60, "Americano": 40}
-americano_price = menu["Americano"]
-menu["Latte"] = 70
-menu["Cappuccino"] = 65
-print(menu)
-print(menu.get("Flat White", "Nema"))
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
 
-product = {"name": "Laptop", "price": 1000, "stock": 15}
-product["stock"] -= 1
-product["price"] *= 1.1
+salary_total = 0
+employee_count = 0
+for dep in EMPLOYEE_DB.values():
+    for employee in dep.values():
+        salary_total += employee["salary"]
+        employee_count += 1
 
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile["phone"] = "+380991234567"
-user_profile["is_premium"] = False
-user_profile.pop("discount")
-print(user_profile)
+avg = salary_total / employee_count
+print(f"Average salary: {avg}")
 
-expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
-total = 0
-for ex in expenses.values():
-    total += ex
-print(f"Total expenses: {total}")
 
-total = sum(expenses.values())
-
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-average_grade = sum(grades.values())/len(grades)
-print(average_grade)
-
-total_grades = 0
-for gr in grades.values():
-    total_grades += gr
-
-avg = total_grades/len(grades)
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
