@@ -66,3 +66,8 @@ for ex in expenses.values():
 print(total)
 total = sum(expenses.values())
 print(total)
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+
+avggrade = sum(grades.values())/len(grades)
+print(avggrade)
