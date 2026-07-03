@@ -35,3 +35,18 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+# gross_salaries = [15000, 22000, 18500, 31000]
+# net_salaries = [i * 0.8 for i in gross_salaries]
+# print(*net_salaries)
+
+
+
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [name.title() for name in raw_names]
+# print(clean_names)
+
+
+balances = [5000, -1000, 250, -500]
+new_balances = [i * 1.1 if i < 0 else i for i in balances]
+print(new_balances)
