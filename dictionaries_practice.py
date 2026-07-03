@@ -96,13 +96,127 @@ TRANSACTIONS_DB = [
 # remove = EMPLOYEE_DB["tech"].pop("charlie")
 # print(EMPLOYEE_DB)
 
-active_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
-print(active_clients)
+# active_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+# print(active_clients)
+#
+# amount_client = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] >= 10000]
+# print(amount_client)
+#
+# refund_clients = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
+# print(refund_clients)
 
-amount_client = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] >= 10000]
-print(amount_client)
+# experiment_json = {
+#   "transactionId": "TXN-8749302-A",
+#   "timestamp": "2026-07-03T12:39:00Z",
+#   "type": "transfer",
+#   "status": "completed",
+#   "source": {
+#     "accountId": "ACC-99482-S",
+#     "accountHolder": "John Doe",
+#     "bank": "Global Trust Bank"
+#   },
+#   "destination": {
+#     "accountId": "ACC-11029-D",
+#     "accountHolder": "Jane Smith",
+#     "bank": "First National Bank"
+#   },
+#   "amount": {
+#     "value": 1500.00,
+#     "currency": "USD"
+#   },
+#   "metadata": {
+#     "description": "Monthly rent payment",
+#     "referenceCode": "RENT-JUL-2026",
+#     "ipAddress": "192.168.1.15"
+#   }
+# }
+# print(experiment_json["source"]["accountId"])
+# print(experiment_json["amount"]["currency"])
 
-refund_clients = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
-print(refund_clients)
+experiment_json = [{
+  "transactionId": "TXN-8749302-A",
+  "timestamp": "2026-07-03T12:39:00Z",
+  "type": "transfer",
+  "status": "completed",
+  "source": {
+    "accountId": "ACC-99482-S",
+    "accountHolder": "John Doe",
+    "bank": "Global Trust Bank"
+  },
+  "destination": {
+    "accountId": "ACC-11029-D",
+    "accountHolder": "Jane Smith",
+    "bank": "First National Bank"
+  },
+  "amount": {
+    "value": 1000.00,
+    "currency": "USD"
+  },
+  "metadata": {
+    "description": "Monthly rent payment",
+    "referenceCode": "RENT-JUL-2026",
+    "ipAddress": "192.168.1.15"
+  }
+},
+    {
+        "transactionId": "TXN-8749302-A",
+        "timestamp": "2026-07-03T12:39:00Z",
+        "type": "transfer",
+        "status": "completed",
+        "source": {
+            "accountId": "ACC-99482-S",
+            "accountHolder": "John Doe",
+            "bank": "Global Trust Bank"
+        },
+        "destination": {
+            "accountId": "ACC-11029-D",
+            "accountHolder": "Jane Smith",
+            "bank": "First National Bank"
+        },
+        "amount": {
+            "value": 2000.00,
+            "currency": "USD"
+        },
+        "metadata": {
+            "description": "Monthly rent payment",
+            "referenceCode": "RENT-JUL-2026",
+            "ipAddress": "192.168.1.15"
+        }
+    }
+,
+    {
+        "transactionId": "TXN-8749302-A",
+        "timestamp": "2026-07-03T12:39:00Z",
+        "type": "transfer",
+        "status": "completed",
+        "source": {
+            "accountId": "ACC-99482-S",
+            "accountHolder": "John Doe",
+            "bank": "Global Trust Bank"
+        },
+        "destination": {
+            "accountId": "ACC-11029-D",
+            "accountHolder": "Jane Smith",
+            "bank": "First National Bank"
+        },
+        "amount": {
+            "value": 1500.00,
+            "currency": "USD"
+        },
+        "metadata": {
+            "description": "Monthly rent payment",
+            "referenceCode": "RENT-JUL-2026",
+            "ipAddress": "192.168.1.15"
+        }
+    }
+]
+suma = 0
+for transaction in experiment_json:
+    suma += transaction["amount"]["value"]
+
+print(suma / len(experiment_json))
+
+print(experiment_json[0]["source"]["accountId"])
+print(experiment_json[1]["amount"]["currency"])
 
 
