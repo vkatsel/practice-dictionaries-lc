@@ -17,7 +17,20 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
+#alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+#print(alice_salary)
+#salarytotal = 0
+#employeecount = 0
+#for dep in EMPLOYEE_DB.values():
+#    for employee in dep.values():
+#        salarytotal += employee["salary"]
+#        employeecount += 1
+#print(salarytotal/employeecount)
 
+#EMPLOYEE_DB['sales']['diana']['salary'] = 3500
+#print(EMPLOYEE_DB['sales']['diana']['salary'])
+#EMPLOYEE_DB['tech'].pop('charlie')
+#print(EMPLOYEE_DB['tech'])
 # Ваш код для завдань нижче:
 
 # ==========================================
@@ -35,3 +48,56 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+Active_clients = [i["client"] for i in TRANSACTIONS_DB if i["status"] == "success"]
+print(Active_clients)
+HIGH_VALUE_TRANSACTIONS = [i for i in TRANSACTIONS_DB if i["amount"] > 10000]
+print(HIGH_VALUE_TRANSACTIONS)
+REFUND = [i["amount"] for i in TRANSACTIONS_DB if i["category"] == "Refund"]
+print(REFUND)
+TOTAL_REVENUE = [i["amount"] for i in TRANSACTIONS_DB if i["amount"] > 0 and i['status'] == 'success']
+print(TOTAL_REVENUE)
+print(sum(TOTAL_REVENUE))
+Blacklist = [i['client'] for i in TRANSACTIONS_DB if i['status'] == "failed"]
+print(Blacklist)
+
+
+#menu = {"Latte": 60, "Americano": 40}
+#americano_price = menu["Americano"]
+#print(americano_price)
+#menu["Latte"] = 70
+#menu["Capuccino"] = 65
+#print(menu)
+#print(menu.get("Flat White", "Nicht"))
+
+#product = {"name": "Laptop", "price": 1000, "stock": 15}
+#product['stock'] -= 1
+#product['price'] *= 1.1
+#print(product)
+
+#user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+#user_profile["phone"] = "+380991234567"
+#user_profile["is_premium"] = False
+#user_profile.pop('discount')
+#print(user_profile)
+
+#expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+#total = 0
+#for ex in expenses.values():
+    #total += ex
+#print(total)
+#total = sum(expenses.values())
+#print(total)
+
+#grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+
+#avggrade = sum(grades.values())/len(grades)
+#print(avggrade)
+
+#totalgrades = 0
+#counter = 0
+#for grade in grades.values():
+    #totalgrades += grade
+    #counter += 1
+#avggrade = totalgrades/counter
+#avggrade = totalgrades/len(grades)
+#print(avggrade)
