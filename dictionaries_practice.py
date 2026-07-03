@@ -77,3 +77,17 @@ TRANSACTIONS_DB = [
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
 
+active_clients = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="success"]
+print(active_clients)
+
+high_values_transactions = [tr for tr in TRANSACTIONS_DB if tr["amount"]>10000]
+print(high_values_transactions)
+
+refunds = [tr["amount"] for tr in TRANSACTIONS_DB if tr["category"]=="Refund"]
+print (f"Refunds: {refunds}")
+
+total_revenue = sum([tr["amount"] for tr in TRANSACTIONS_DB if tr["status"]=="success" and tr["amount"]>0])
+print(total_revenue)
+
+blacklist = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="failed"]
+print(blacklist)
