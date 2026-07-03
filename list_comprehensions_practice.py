@@ -63,39 +63,3 @@ RAW_PRICES = [
 # clean_prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
 # print(clean_prices)
 
-# menu = {"Latte": 60, "Americano": 40}
-# print(f"Americano: {menu["Americano"]}")
-#
-# menu["Latte"] = 70
-# menu["Flat white"] = 65
-# print(f"Updated menu: {menu}")
-# print(f"Cappucino: {menu.get("Cappucino", "none")}")
-
-# product = {"name": "Laptop", "price": 1000, "stock": 15}
-#
-# product["stock"] -= 1
-# product["price"] *= 1.1
-# print(product)
-
-# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-# user_profile["phone"] = "+380991234567"
-# user_profile["is_premium"] = False
-# removed = user_profile.pop("discount")
-# print(user_profile)
-
-# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
-#
-# suma = 0
-# for expence in expenses.values():
-#     suma += expence
-# print(f"Suma is {suma}")
-
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-
-suma = 0
-count = 0
-
-for grade in grades.values():
-    suma += grade
-    count += 1
-print(suma/count)
