@@ -86,4 +86,13 @@ TRANSACTIONS_DB = [
 
 
 
+active_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(active_clients)
+
+high_value_transactions = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] >= 10000]
+print(high_value_transactions)
+
+refunds = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
+print(refunds)
+
 
