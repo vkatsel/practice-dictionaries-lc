@@ -35,3 +35,9 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+menu = {"Latte": 60, "Americano": 40}
+print(f"Americano: {menu['Americano']}")
+menu["Late"] = 70
+menu["Flat-white"] = 65
+print(f"Update menu: {menu}")
+print(f"Capuchino: {menu.get("Capuchino","Undefined")}")
