@@ -48,6 +48,17 @@ for ex in expenses.values():
     total += ex
 print(f"Total expenses: {total}")
 
+#4
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+average = sum(grades.values())/ len(grades)
+print (average)
+
+total = 0
+for gr in grades.values():
+    total += gr
+average = total/len(grades)
+print(average)
+
 
 
 
