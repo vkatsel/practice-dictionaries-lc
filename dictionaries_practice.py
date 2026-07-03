@@ -53,7 +53,9 @@ TRANSACTIONS_DB = [
 #     suma+=i
 # print(sum(expenses.values()))
 
-# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 # print(sum(grades.values())/len(grades.values()))
 
-
+suma = 0
+for grade in grades:
+    suma+=grades[grade]
