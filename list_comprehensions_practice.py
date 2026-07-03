@@ -58,3 +58,11 @@ RAW_PRICES = [
 #
 # prices = [float(price[1:]) for price in RAW_PRICES if price.startswith("$")]
 # print(prices)
+#
+# menu = {"Latte": 60, "Americano": 40}
+# print(f"Latte {menu["Latte"]}")
+#
+# menu["Americano"] = 70
+# menu["Flat white"] = 65
+# print(f"updated dict: {menu}")
+# print(f"Cappucino: {menu.get('Cappucino', "unknown")}")
