@@ -74,10 +74,17 @@ TRANSACTIONS_DB = [
 
 
 
-expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+#
+# suma= 0
+# for key , value in expenses.items():
+#     suma += value
+# print(suma)
 
-suma= 0
-for key , value in expenses.items():
-    suma += value
-print(suma)
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+
+total= sum(grades.values())
+average = total / len(grades)
+print(average)
 
