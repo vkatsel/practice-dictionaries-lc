@@ -5,7 +5,7 @@
 
 EMPLOYEE_DB = {
     "tech": {
-        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "alice": {"role": "Data Scientist", "salary": [4500, 5000], "status": "active"},
         "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
         "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
     },
@@ -59,11 +59,27 @@ TRANSACTIONS_DB = [
 #     suma += expense
 # print(f"Sum: {suma}")
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-suma = 0
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# suma = 0
+#
+# for g in grades.values():
+#     suma += g
+#
+# average = suma / len(grades)
+# print(average)
 
-for g in grades.values():
-    suma += g
+#
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
 
-average = suma / len(grades)
-print(average)
+total_salary = 0
+total_employees = 0
+for key, dept in EMPLOYEE_DB.items():
+    total_employees += len(dept)
+
+    dept_sal = 0
+    for employee in dept:
+        total_salary += dept[employee]["salary"]
+        dept_sal += dept[employee]["salary"]
+    print(f"Average salary for {key}: {dept_sal/len(dept)}")
+print(f"Average salary for all debts: {total_salary / total_employees}")
+
