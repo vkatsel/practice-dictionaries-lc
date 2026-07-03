@@ -40,10 +40,28 @@ EMPLOYEE_DB = {
 # for key, value in expenses.items():
 #     suma=suma+value
 # print(suma)
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-total=sum(grades.values())
-average=total/len(grades)
-print(average)
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# total=sum(grades.values())
+# average=total/len(grades)
+# print(average)
+
+
+alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
+salary_total=0
+
+employee_count=0
+
+for dep in EMPLOYEE_DB.values():
+    for employees in dep.values():
+        salary_total+=employees["salary"]
+        employee_count+=1
+avg=salary_total/employee_count
+print(avg)
+
+
+
 
 
 
