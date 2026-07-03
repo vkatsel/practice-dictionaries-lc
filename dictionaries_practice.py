@@ -19,6 +19,20 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+# total_salary = 0
+# total_emp = 0
+# for department in EMPLOYEE_DB.values():
+#     total_emp += len(department)
+#     for employee in department:
+#         total_salary += department[employee]["salary"]
+#
+#
+# print(total_salary/total_emp)
+
+EMPLOYEE_DB ["tech"]["alice"]["salary"] = 3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
