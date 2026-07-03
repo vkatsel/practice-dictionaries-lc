@@ -39,7 +39,7 @@ SERVER_LOGS = [
     "INFO: User logged out"
 ]
 
-error_logs = [log.replace("ERROR: ", "") for log in SERVER_LOGS if log.startswith("ERROR:")]
+error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
 print(error_logs)
 
 
