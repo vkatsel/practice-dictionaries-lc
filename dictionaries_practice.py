@@ -26,6 +26,11 @@ for dep in EMPLOYEE_DB.values():
         salarytotal += employee["salary"]
         employeecount += 1
 print(salarytotal/employeecount)
+
+EMPLOYEE_DB['sales']['diana']['salary'] = 3500
+print(EMPLOYEE_DB['sales']['diana']['salary'])
+EMPLOYEE_DB['tech'].pop('charlie')
+print(EMPLOYEE_DB['tech'])
 # Ваш код для завдань нижче:
 
 # ==========================================
