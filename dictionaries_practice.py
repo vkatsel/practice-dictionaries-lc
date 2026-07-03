@@ -30,9 +30,9 @@ EMPLOYEE_DB = {
 #
 # print(total_salary/total_emp)
 
-EMPLOYEE_DB ["tech"]["alice"]["salary"] = 3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(EMPLOYEE_DB)
+# EMPLOYEE_DB ["tech"]["alice"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
@@ -49,3 +49,16 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+# active_clients = [trans for trans in TRANSACTIONS_DB
+#                   if trans["status"] == "success"]
+# print(active_clients)
+#
+# active_clients = [value for value in TRANSACTIONS_DB
+#                   if value["amount"] > 10000]
+# print(active_clients)
+#
+# active_clients = [ref for ref in TRANSACTIONS_DB
+#                   if ref["category"] == "Refund"]
+# print(active_clients)
+#
