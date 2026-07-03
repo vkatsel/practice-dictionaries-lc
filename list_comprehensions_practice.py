@@ -75,9 +75,20 @@
 # pr = [log.replace('$','') for log in RAW_PRICES if log.startswith('$')]
 # print(pr)
 
-menu = {"Latte": 60, "Americano": 40}
-print(f'Americano {menu["Americano"]}')
-menu['Late'] = 70
-menu['Flat'] = 65
-print (f'updaed {menu}')
-print(f'capuccino {menu.get('capuccino', 'no')}')
+# menu = {"Latte": 60, "Americano": 40}
+# print(f'Americano {menu["Americano"]}')
+# menu['Late'] = 70
+# menu['Flat'] = 65
+# print (f'updaed {menu}')
+# print(f'capuccino {menu.get('capuccino', 'no')}')
+
+# product = {"name": "Laptop", "price": 1000, "stock": 15}
+# product["price"] *= 1.1
+# product["stock"] -= 1
+# print(product)
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile['phone'] = '+380991234567'
+user_profile["is_premium"] = False
+r = user_profile.pop('discount')
+print(user_profile)
