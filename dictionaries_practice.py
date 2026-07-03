@@ -108,17 +108,25 @@ TRANSACTIONS_DB = [
 # EMPLOYEE_DB["tech"].pop("charlie")
 # print(f"New EMPLOYEE_DB = {EMPLOYEE_DB}")
 
-active_clients = [transaction for transaction in TRANSACTIONS_DB
-           if transaction["status"] == "success"]
-
-print(active_clients)
-
-high_value_clients = [amount for amount in TRANSACTIONS_DB
-           if amount["amount"] > 10000]
-
-print(high_value_clients)
-
+# active_clients = [transaction for transaction in TRANSACTIONS_DB
+#            if transaction["status"] == "success"]
+#
+# print(active_clients)
+#
+# high_value_clients = [amount for amount in TRANSACTIONS_DB
+#            if amount["amount"] > 10000]
+#
+# print(high_value_clients)
+#
 refund = [amount["amount"] for amount in TRANSACTIONS_DB
            if amount["category"] == "Refund"]
 
 print(refund)
+
+incomes = [transaction["amount"] for transaction in TRANSACTIONS_DB
+           if transaction["status"] == "success"]
+print(incomes)
+
+rej_clients = [transaction["client"] for transaction in TRANSACTIONS_DB
+           if transaction["status"] == "failed"]
+print(rej_clients)
