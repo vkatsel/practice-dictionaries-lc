@@ -39,3 +39,9 @@ print(new_balances)
 transactions = [1200, 15000, 450, 55000, 800]
 vip_transactions=[p for p in transactions if p>10000]
 print(vip_transactions)
+
+errors=[p[7:] for p in SERVER_LOGS if p.startswith("ERROR")]
+print(errors)
+
+prices=[float(p[1:]) for p in RAW_PRICES if p.startswith("$")]
+print(prices)
