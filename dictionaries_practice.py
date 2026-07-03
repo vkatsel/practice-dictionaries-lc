@@ -35,3 +35,15 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+salary_total = 0
+employee_count = 0
+for dep in EMPLOYEE_DB.values():
+    for employee in dep.values():
+        salary_total += employee["salary"]
+        employee_count += 1
+avg = salary_total/employee_count
+print(avg)

@@ -75,12 +75,14 @@ RAW_PRICES = [
 # print(suma)
 # total = sum(expenses.values())
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-total = sum(grades.values())
-average = total / len(grades)
-print(average)
-total = 0
-for grade in grades.values():
-    total += grade
-average = total / len(grades)
-print(average)
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# total = sum(grades.values())
+# average = total / len(grades)
+# print(average)
+# total = 0
+# for grade in grades.values():
+#     total += grade
+# average = total / len(grades)
+# print(average)
+
+
