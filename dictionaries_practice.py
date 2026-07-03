@@ -19,6 +19,28 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+#Warm Up
+menu = {"Latte": 60, "Americano": 40}
+americano = menu["Americano"]
+print(americano)
+menu["Latte"] = 70
+menu["Americano"] = 65
+print(menu)
+print(menu.get("Flat White", "No Flat White"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
