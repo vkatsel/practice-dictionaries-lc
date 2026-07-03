@@ -77,3 +77,10 @@ TRANSACTIONS_DB = [
 #
 # print(f"Average salary for all depts: {total_salary/total_employees}")
 
+
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+EMPLOYEE_DB["tech"].pop("charlie")
+
+print(EMPLOYEE_DB)
+
