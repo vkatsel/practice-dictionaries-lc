@@ -68,3 +68,7 @@ RAW_PRICES = [
 
 prices = [float(p[1:]) for p in RAW_PRICES if p.startswith("$")]
 print(prices)
+
+
+clean_data = [0 if x < 0 else x for x in [10, -5, 20, -1]]
+print(clean_data)
