@@ -86,19 +86,19 @@ TRANSACTIONS_DB = [
 
 
 
-active_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
-print(active_clients)
-
-high_value_transactions = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] >= 10000]
-print(high_value_transactions)
-
-refunds = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
-print(refunds)
-
-total_revenue = sum([transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success" and transaction["amount"] > 0])
-print(total_revenue)
-
-blacklist = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]
-print(blacklist)
+# active_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+# print(active_clients)
+#
+# high_value_transactions = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] >= 10000]
+# print(high_value_transactions)
+#
+# refunds = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
+# print(refunds)
+#
+# total_revenue = sum([transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success" and transaction["amount"] > 0])
+# print(total_revenue)
+#
+# blacklist = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]
+# print(blacklist)
 
 
