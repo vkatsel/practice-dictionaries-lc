@@ -17,8 +17,69 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
+alise_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alise_salary)
+
+salary_total = 0
+employee_count = 0
+for dep in EMPLOYEE_DB.values():
+    for employee in dep.values():
+        salary_total += employee["salary"]
+        employee_count += 1
+average = salary_total / employee_count
+print (average)
+
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+charlie = EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
+
+
+
 
 # Ваш код для завдань нижче:
+#Warm Up
+menu = {"Latte": 60, "Americano": 40}
+americano = menu["Americano"]
+print(americano)
+menu["Latte"] = 70
+menu["Americano"] = 65
+print(menu)
+print(menu.get("Flat White", "No Flat White"))
+
+#1
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -=1
+product["price"] *=1.1
+print(product)
+
+#2
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"] = "+380991234567"
+user_profile["is_premium"] = False
+discount = user_profile.pop("discount")
+print(user_profile)
+
+#3
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+total = 0
+for ex in expenses.values():
+    total += ex
+print(f"Total expenses: {total}")
+
+#4
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+average = sum(grades.values())/ len(grades)
+print (average)
+
+total = 0
+for gr in grades.values():
+    total += gr
+average = total/len(grades)
+print(average)
+
+
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
@@ -35,3 +96,22 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+
+active_clients = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "success"]
+print (active_clients)
+
+high_value_transactions = [val for val in TRANSACTIONS_DB if val["amount"] > 10000 ]
+print(high_value_transactions)
+
+refunds = [tr["amount"] for tr in TRANSACTIONS_DB if tr["category"] == "Refund"]
+print(refunds)
+
+total_revenue = [tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"]>0 and tr["status"] == "success"]
+suma = sum(total_revenue)
+print(suma)
+
+blacklist = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "failed"]
+print(blacklist)
+
+
