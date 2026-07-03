@@ -15,3 +15,11 @@ TRANSACTIONS_DB = [
 ]
 
 # Ваш код для завдань нижче:
+gross_salaries = [15000, 22000, 18500, 31000]
+net_salaries = [salary*0.8 for salary in gross_salaries]
+# Refunds = [t["amount"] for t in TRANSACTIONS_DB if t["category"]== "Refund"]
+# print(Refunds)
+# Total = sum([t["amount"] for t in TRANSACTIONS_DB if t["status"] == "success"])
+# print(Total)
+# Blacklist = [t["client"] for t in TRANSACTIONS_DB if t["status"] == "failed"]
+# print(Blacklist)
