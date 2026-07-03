@@ -31,8 +31,8 @@ RAW_PRICES = [
 ]
 
 # Ваш код для завдань нижче:
-
-
+valid = [ float(price[1:]) for price in RAW_PRICES if price[0]=="$"]
+print(valid)
 
 # gross_salaries = [15000, 22000, 18500, 31000]
 # net_salaries = [ salary*(salary*0.2) for salary in gross_salaries]
@@ -55,3 +55,13 @@ RAW_PRICES = [
 # vipvip = [t*2 if t % 2 == 0 else t/2 for t in transactions if t > 10000]
 # print(*vip)
 # print(*vipvip)
+
+SERVER_LOGS = [
+    "INFO: User logged in",
+    "ERROR: Connection timeout",
+    "DEBUG: Query executed",
+    "ERROR: Database locked",
+]
+
+# error_logs = [log.replace("ERROR:", "").strip() ]
+# print(error_logs)
