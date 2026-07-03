@@ -37,13 +37,17 @@ TRANSACTIONS_DB = [
 ]
 
 
-alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
-print(alice_salary)
-salary_total = 0
-employee_count = 0
-for dep in EMPLOYEE_DB.values():
-    for employee in dep.values():
-        salary_total += employee["salary"]
-        employee_count += 1
-avg = salary_total/employee_count
-print(avg)
+# alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+# print(alice_salary)
+# salary_total = 0
+# employee_count = 0
+# for dep in EMPLOYEE_DB.values():
+#     for employee in dep.values():
+#         salary_total += employee["salary"]
+#         employee_count += 1
+# avg = salary_total/employee_count
+# print(avg)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
