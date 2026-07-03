@@ -41,6 +41,16 @@ RAW_PRICES = [
 # net_salaries = [salary * 0.8 for salary in gross_salaries]
 # print(net_salaries)
 
-raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
-clean_names = [name.title() for name in raw_names]
-print(clean_names)
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [name.title() for name in raw_names]
+# print(clean_names)
+
+# balances = [5000, -1000, 250, -500]
+# new_balances = [balance if balance > 0 else balance * 1.1 for balance in balances]
+# print(new_balances)
+# status_bank = "good" if sum(new_balances) > 2000 else "bad"
+# print(f"Bank status: {status_bank}")
+
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [transaction for transaction in transactions if transaction > 10000]
+print(vip_transactions)
