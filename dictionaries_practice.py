@@ -75,47 +75,70 @@ TRANSACTIONS_DB = [
 # print(sum(grades.values())/len(grades))
 
 
-EMPLOYEE_DB = {
-    "tech": {
-        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
-        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
-        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
-    },
-    "sales": {
-        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
-        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
-    },
-    "hr": {
-        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
-    }
-}
-print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+# EMPLOYEE_DB = {
+#     "tech": {
+#         "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+#         "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+#         "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+#     },
+#     "sales": {
+#         "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+#         "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+#     },
+#     "hr": {
+#         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+#     }
+# }
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+#
+# total_salary = 0
+# total_employees = 0
+# for department in EMPLOYEE_DB.values():
+#     total_employees += len(department)
+#
+#     for employee in department:
+#         total_salary += department[employee]["salary"]
+# print(f"Total salary for all depts: {total_salary/total_employees}")
+#
+# total_salary = 0
+# total_employees = 0
+# for key, department in EMPLOYEE_DB.items():
+#     total_employees += len(department)
+#     department_sal = 0
+#
+#     for employee in department:
+#         total_salary += department[employee]["salary"]
+#         department_sal += department[employee]["salary"]
+# print(f"Average salary for {key}: {department_sal/len(department)}")
+# print(f"Average salary for all depts: {total_salary/total_employees}")
+#
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
 
-total_salary = 0
-total_employees = 0
-for department in EMPLOYEE_DB.values():
-    total_employees += len(department)
+TRANSACTIONS_DB = [
+    {"id": 1, "client": "Alice", "amount": 1200, "category": "Electronics", "status": "success"},
+    {"id": 2, "client": "Bob", "amount": 450, "category": "Groceries", "status": "success"},
+    {"id": 3, "client": "Charlie", "amount": -150, "category": "Refund", "status": "success"},
+    {"id": 4, "client": "Diana", "amount": 55000, "category": "Auto", "status": "pending"},
+    {"id": 5, "client": "Eve", "amount": 800, "category": "Electronics", "status": "failed"},
+    {"id": 6, "client": "Frank", "amount": 200, "category": "Groceries", "status": "success"},
+    {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
+    {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
+]
+active_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(active_clients)
 
-    for employee in department:
-        total_salary += department[employee]["salary"]
-print(f"Total salary for all depts: {total_salary/total_employees}")
+new = [suma for suma in TRANSACTIONS_DB if suma["amount"] > 10000]
+print(new)
 
-total_salary = 0
-total_employees = 0
-for key, department in EMPLOYEE_DB.items():
-    total_employees += len(department)
-    department_sal = 0
+suma = [s["amount"] for s in TRANSACTIONS_DB if s["category"] == "Refund"]
+print(suma)
 
-    for employee in department:
-        total_salary += department[employee]["salary"]
-        department_sal += department[employee]["salary"]
-print(f"Average salary for {key}: {department_sal/len(department)}")
-print(f"Average salary for all depts: {total_salary/total_employees}")
+incomes = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(sum(incomes))
 
-EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(EMPLOYEE_DB)
-
-
+rejected = [[transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]]
+print(*rejected)
 
 
