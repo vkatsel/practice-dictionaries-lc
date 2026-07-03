@@ -48,6 +48,21 @@ TRANSACTIONS_DB = [
 # avg = salary_total/employee_count
 # print(avg)
 
-EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(EMPLOYEE_DB)
+# EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
+
+active_clients = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(active_clients)
+
+high_value_transactions = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] > 10000]
+print(high_value_transactions)
+
+refunds = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
+print(refunds)
+pos_transactions = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["amount"] > 0 and transaction["status"] == "success"]
+print(sum(pos_transactions))
+failed_trans = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]
+print(failed_trans)
+
+
