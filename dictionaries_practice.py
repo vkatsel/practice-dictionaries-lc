@@ -28,7 +28,11 @@ menu["Americano"] = 65
 print(menu)
 print(menu.get("Flat White", "No Flat White"))
 
-
+#1
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -=1
+product["price"] *=1.1
+print(product)
 
 
 
