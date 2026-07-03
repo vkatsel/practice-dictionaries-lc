@@ -79,7 +79,18 @@ TRANSACTIONS_DB = [
 #     avg = suma/length
 #     print(f"{department} department's average salary: {suma/length}")
 
+#
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
 
-EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(EMPLOYEE_DB)
+active = [t["client"] for t in TRANSACTIONS_DB if t["status"]=="success"]
+print(active)
+high_value = [t for t in TRANSACTIONS_DB if t["amount"]>=10000]
+print(high_value)
+refund = [t["amount"] for t in TRANSACTIONS_DB if t["category"]=="Refund"]
+print(refund)
+total_rev = sum([t["amount"] for t in TRANSACTIONS_DB if t["amount"]>0 and t["status"]=="success"])
+print(total_rev)
+blacklis = [t["client"] for t in TRANSACTIONS_DB if t["status"]=="failed"]
+print(blacklis)
