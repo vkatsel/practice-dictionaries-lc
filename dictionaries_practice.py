@@ -38,6 +38,24 @@ user_profile["is_premium"] = False
 user_profile.pop("discount")
 print(user_profile)
 
+client = {"name": "Іван", "email": "ivan@example.com"}
+phone_number = client.get("phone")
+print(f"Телефонуйте за номером: {phone_number}")
+
+cart = {"items_count": 3, "total_price": 450}
+cart["promo_code"] = "SALE20"
+
+settings = {
+    "theme": "dark",
+    "notifications": True,
+    "volume": 80
+}
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+suma=0
+for i in expenses.values():
+    suma+=i
+print(suma)
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
