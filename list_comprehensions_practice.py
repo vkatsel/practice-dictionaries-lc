@@ -39,3 +39,6 @@ print(*with_fine)
 transactions = [1200, 15000, 450, 55000, 800]
 vip_trans = [transaction for transaction in transactions if transaction > 10000]
 print(*vip_trans)
+
+error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
+print(error_logs)
