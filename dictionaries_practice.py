@@ -46,20 +46,24 @@ EMPLOYEE_DB = {
 # print(average)
 
 
-alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
-print(alice_salary)
+# alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+# print(alice_salary)
+#
+# salary_total=0
+#
+# employee_count=0
+#
+# for dep in EMPLOYEE_DB.values():
+#     for employees in dep.values():
+#         salary_total+=employees["salary"]
+#         employee_count+=1
+# avg=salary_total/employee_count
+# print(avg)
 
-salary_total=0
 
-employee_count=0
-
-for dep in EMPLOYEE_DB.values():
-    for employees in dep.values():
-        salary_total+=employees["salary"]
-        employee_count+=1
-avg=salary_total/employee_count
-print(avg)
-
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
 
 
 
@@ -80,3 +84,4 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
