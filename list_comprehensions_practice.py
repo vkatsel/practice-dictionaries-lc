@@ -24,14 +24,18 @@ RAW_PRICES = [
 ]
 
 # Ваш код для завдань нижче:
-gross_salaries = [15000, 22000, 18500, 31000]
-net_salaries = [p*0.8 for p in gross_salaries]
-print(net_salaries)
+#gross_salaries = [15000, 22000, 18500, 31000]
+#net_salaries = [p*0.8 for p in gross_salaries]
+#print(net_salaries)
 
-raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
-clean_names = [name.title() for name in raw_names]
-print(clean_names)
+#raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+#clean_names = [name.title() for name in raw_names]
+#print(clean_names)
 
-balances = [5000, -1000, 250, -500]
-newbalances = [p * 1.1 if p<0 else p for p in balances]
-print(newbalances)
+#balances = [5000, -1000, 250, -500]
+#newbalances = [p * 1.1 if p<0 else p for p in balances]
+#print(newbalances)
+
+transactions = [1200, 15000, 450, 55000, 800]
+vip = [p for p in transactions if p>10000]
+print(vip)
