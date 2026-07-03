@@ -24,3 +24,21 @@ RAW_PRICES = [
 ]
 
 # Ваш код для завдань нижче:
+# numbers = [1, 2, 3, 4, 5]
+# results = []
+#
+# for num in numbers:
+#     squared = num ** 2
+#     results.append(squared)
+# print(results)
+#
+# results_2 = [num ** 2 for num in numbers]
+# print(results_2)
+# gross_salaries = [15000, 22000, 18500, 31000]
+#
+# net_seleries = [seleries - (seleries * 0.2) for seleries in gross_salaries]
+#
+# print(net_seleries)
+raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+clean_names = [i.title() for i in raw_names]
+print(clean_names)
