@@ -19,7 +19,69 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+menu = {"Latte": 60, "Americano": 40}
+price_am=menu["Americano"]
+print(price_am)
+menu["Latte"]=70
+menu["Americano"]=65
+print(menu)
+print(menu.get("Flat White","Nope"))
 
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -= 1
+product["price"] *= 1.1
+print(product)
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"] = "+380991234567"
+user_profile["is_premium"] = False
+user_profile.pop("discount")
+print(user_profile)
+
+client = {"name": "Іван", "email": "ivan@example.com"}
+phone_number = client.get("phone")
+print(f"Телефонуйте за номером: {phone_number}")
+
+cart = {"items_count": 3, "total_price": 450}
+cart["promo_code"] = "SALE20"
+
+settings = {
+    "theme": "dark",
+    "notifications": True,
+    "volume": 80
+}
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+suma=0
+for i in expenses.values():
+    suma+=i
+print(suma)
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+average_grade=sum(grades.values())/len(grades)
+print(average_grade)
+
+total=0
+for i in grades.values():
+    total+=i
+print(total/len(grades))
+
+alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
+total=0
+count=0
+for dep in EMPLOYEE_DB.values():
+    for guy in dep.values():
+        total+=guy["salary"]
+        count+=1
+averag=total/count
+print("Average salary: "+str(averag))
+
+#оновлення salary для diana і видалення charlie
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
@@ -35,3 +97,20 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+# Capstone code
+active_clients=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="success"]
+print("Active clients: ", active_clients)
+
+high_value=[tr for tr in TRANSACTIONS_DB if tr["amount"]>=10000]
+print("High value transactions: ", high_value)
+
+refunds=[tr["amount"] for tr in TRANSACTIONS_DB if tr["category"]=="Refund"]
+print("All refunds: ",refunds)
+
+revenue=[tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"]>0 and tr["status"]=="success"]
+total_rev=sum(revenue)
+print("Total successful revenue: ",total_rev)
+
+failed_trans=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="failed"]
+print("Clients with failed transactions: ",failed_trans)
