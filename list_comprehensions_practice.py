@@ -53,7 +53,13 @@ RAW_PRICES = [
 # status_bank = "good" if sum(balances) > 3000 else "bad"
 # print(f"Bank status: {status_bank}")
 
-transactions = [1200, 15000, 450, 55000, 800]
-vip_transactions = [transaction for transaction in transactions
-                    if transaction > 10000]
-print(vip_transactions)
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [transaction for transaction in transactions
+#                     if transaction > 10000]
+# print(vip_transactions)
+
+# cleaned_messages = [log.replace("ERROR", "").strip() for log in SERVER_LOGS if log.startswith("ERROR")]
+# print(cleaned_messages)
+
+NEW_PRICES = [float(price.replace("$","")) for price in RAW_PRICES if price.startswith("$")]
+print(NEW_PRICES)
