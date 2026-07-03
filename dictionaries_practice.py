@@ -53,3 +53,9 @@ user_profile["phone"]="+380991234567"
 user_profile["is_premium"]="False"
 user_profile.pop("discount")
 print(user_profile)
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+print(sum(expenses.values()))
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+print(sum(grades.values())/len(grades.values()))
