@@ -55,22 +55,67 @@ TRANSACTIONS_DB = [
 # new = user_profile.pop("discount")
 # print(f"Updated user profile: {user_profile}")
 
-expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
-print(sum(list(expenses.values())))
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+# print(sum(list(expenses.values())))
+#
+# print(sum(expenses.values()))
+#
+# suma = 0
+# for expense in expenses.values():
+#     suma += expense
+# print(f"The sum of the expenses is {suma}")
+#
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# suma = 0
+# for grade in grades.values():
+#     suma += grade
+# ave = suma/len(grades)
+# print(f"The average grade is {ave}")
+#
+# print(sum(grades.values())/len(grades))
 
-print(sum(expenses.values()))
 
-suma = 0
-for expense in expenses.values():
-    suma += expense
-print(f"The sum of the expenses is {suma}")
+EMPLOYEE_DB = {
+    "tech": {
+        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+    },
+    "sales": {
+        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+    },
+    "hr": {
+        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+    }
+}
+print(EMPLOYEE_DB["tech"]["alice"]["salary"])
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-suma = 0
-for grade in grades.values():
-    suma += grade
-ave = suma/len(grades)
-print(f"The average grade is {ave}")
+total_salary = 0
+total_employees = 0
+for department in EMPLOYEE_DB.values():
+    total_employees += len(department)
 
-print(sum(grades.values())/len(grades))
+    for employee in department:
+        total_salary += department[employee]["salary"]
+print(f"Total salary for all depts: {total_salary/total_employees}")
+
+total_salary = 0
+total_employees = 0
+for key, department in EMPLOYEE_DB.items():
+    total_employees += len(department)
+    department_sal = 0
+
+    for employee in department:
+        total_salary += department[employee]["salary"]
+        department_sal += department[employee]["salary"]
+print(f"Average salary for {key}: {department_sal/len(department)}")
+print(f"Average salary for all depts: {total_salary/total_employees}")
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
+
+
 
