@@ -30,6 +30,14 @@ average = salary_total / employee_count
 print (average)
 
 
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+charlie = EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
+
+
+
+
 # Ваш код для завдань нижче:
 #Warm Up
 menu = {"Latte": 60, "Americano": 40}
@@ -70,9 +78,6 @@ for gr in grades.values():
     total += gr
 average = total/len(grades)
 print(average)
-
-
-
 
 
 
