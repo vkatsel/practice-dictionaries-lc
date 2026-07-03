@@ -52,3 +52,9 @@ RAW_PRICES = [
 # data = [10, -5, 20, -1]
 # clean_data = [0 if x < 0 else x for x in data]
 # print(clean_data)
+#
+# # cleaned_massages = [log.replace("ERROR:"," ").strip()for log in SERVER_LOGS if log.startswith("ERROR")]
+# # print(cleaned_massages)
+#
+# prices = [float(price[1:]) for price in RAW_PRICES if price.startswith("$")]
+# print(prices)
