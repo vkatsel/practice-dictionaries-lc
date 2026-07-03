@@ -164,3 +164,11 @@ print(high_value_transactions)
 refunds = [transaction ["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
 
 print(f"refunds: {refunds}")
+
+pos_transactions = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["amount"] > 0 and transaction["status"] == "success"]
+print(sum(pos_transactions))
+
+
+
+blaklist = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]
+print(blaklist)
