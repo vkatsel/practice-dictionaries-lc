@@ -97,3 +97,20 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+# Capstone code
+active_clients=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="success"]
+print("Active clients: ", active_clients)
+
+high_value=[tr for tr in TRANSACTIONS_DB if tr["amount"]>=10000]
+print("High value transactions: ", high_value)
+
+refunds=[tr["amount"] for tr in TRANSACTIONS_DB if tr["category"]=="Refund"]
+print("All refunds: ",refunds)
+
+revenue=[tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"]>0 and tr["status"]=="success"]
+total_rev=sum(revenue)
+print("Total successful revenue: ",total_rev)
+
+failed_trans=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="failed"]
+print("Clients with failed transactions: ",failed_trans)
