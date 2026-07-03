@@ -46,8 +46,23 @@ RAW_PRICES = [
 # print(with_fine)
 
 
-transactions = [1200, 15000, 450, 55000, 800]
+# transactions = [1200, 15000, 450, 55000, 800]
+#
+# vip_transactions = [transaction for transaction in transactions if transaction > 10000]
+#
+# print("vip_transactions: " , *vip_transactions)
 
-vip_transactions = [transaction for transaction in transactions if transaction > 10000]
 
-print("vip_transactions: " , *vip_transactions)
+
+SERVER_LOGS = [
+    "INFO: User logged in",
+    "ERROR: Connection timeout",
+    "DEBUG: Query executed",
+    "ERROR: Database locked",
+]
+
+error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR")]
+
+print(error_logs)
+
+
