@@ -81,6 +81,23 @@ TRANSACTIONS_DB = [
 #     print(f"Average salary for {key}: {dept_salary/len(dept)}")
 # print(f"Average salary for all depts: {total_salary/total_employees}")
 
-EMPLOYEE_DB["sales"]["diana"]["salry"]=3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(EMPLOYEE_DB)
+# EMPLOYEE_DB["sales"]["diana"]["salry"]=3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
+
+active_clients=[transaction for transaction in TRANSACTIONS_DB
+                if transaction["status"]=="success"]
+print(active_clients)
+
+high_value_transactions=[transaction for transaction in TRANSACTIONS_DB if transaction["amount"]>=10000]
+print(high_value_transactions)
+
+refund=[transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"]=="Refund"]
+print(refund)
+
+total_revenue=sum([transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"]=="success"])
+print(total_revenue)
+
+rej_clients=[transaction["client"] for transaction in TRANSACTIONS_DB
+                if transaction["status"]=="failed"]
+print(*rej_clients)
