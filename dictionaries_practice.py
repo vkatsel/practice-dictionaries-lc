@@ -48,43 +48,43 @@ print(EMPLOYEE_DB)
 # # Використовується для фінальних завдань
 # # ==========================================
 #
-TRANSACTIONS_DB = [
-    {"id": 1, "client": "Alice", "amount": 1200, "category": "Electronics", "status": "success"},
-    {"id": 2, "client": "Bob", "amount": 450, "category": "Groceries", "status": "success"},
-    {"id": 3, "client": "Charlie", "amount": -150, "category": "Refund", "status": "success"},
-    {"id": 4, "client": "Diana", "amount": 55000, "category": "Auto", "status": "pending"},
-    {"id": 5, "client": "Eve", "amount": 800, "category": "Electronics", "status": "failed"},
-    {"id": 6, "client": "Frank", "amount": 200, "category": "Groceries", "status": "success"},
-    {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
-    {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
-]
-# 1.
-active_clients = [t["client"] for t in TRANSACTIONS_DB if t["status"] == "success"]
-print(active_clients)
-
-
-# 2.
-high_value = [t for t in TRANSACTIONS_DB if t["amount"] > 10000]
-print(high_value)
-
-
-# 3.
-refunds = [t["amount"] for t in TRANSACTIONS_DB if t["category"] == "Refund"]
-print(refunds)
-
-
-# 4.
-successful_amounts = [
-    t["amount"] for t in TRANSACTIONS_DB
-    if t["status"] == "success" and t["amount"] > 0
-]
-total_revenue = sum(successful_amounts)
-print(total_revenue)
-
-
-# 5.
-blacklist = [t["client"] for t in TRANSACTIONS_DB if t["status"] == "failed"]
-print(blacklist)
+# TRANSACTIONS_DB = [
+#     {"id": 1, "client": "Alice", "amount": 1200, "category": "Electronics", "status": "success"},
+#     {"id": 2, "client": "Bob", "amount": 450, "category": "Groceries", "status": "success"},
+#     {"id": 3, "client": "Charlie", "amount": -150, "category": "Refund", "status": "success"},
+#     {"id": 4, "client": "Diana", "amount": 55000, "category": "Auto", "status": "pending"},
+#     {"id": 5, "client": "Eve", "amount": 800, "category": "Electronics", "status": "failed"},
+#     {"id": 6, "client": "Frank", "amount": 200, "category": "Groceries", "status": "success"},
+#     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
+#     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
+# ]
+# # 1.
+# active_clients = [t["client"] for t in TRANSACTIONS_DB if t["status"] == "success"]
+# print(active_clients)
+#
+#
+# # 2.
+# high_value = [t for t in TRANSACTIONS_DB if t["amount"] > 10000]
+# print(high_value)
+#
+#
+# # 3.
+# refunds = [t["amount"] for t in TRANSACTIONS_DB if t["category"] == "Refund"]
+# print(refunds)
+#
+#
+# # 4.
+# successful_amounts = [
+#     t["amount"] for t in TRANSACTIONS_DB
+#     if t["status"] == "success" and t["amount"] > 0
+# ]
+# total_revenue = sum(successful_amounts)
+# print(total_revenue)
+#
+#
+# # 5.
+# blacklist = [t["client"] for t in TRANSACTIONS_DB if t["status"] == "failed"]
+# print(blacklist)
 
 
 
@@ -136,3 +136,85 @@ print(blacklist)
 # average = sum(grades.values()) / len(grades)
 
 
+experiment_json = [{
+  "transactionId": "TXN-8749302-A",
+  "timestamp": "2026-07-03T12:39:00Z",
+  "type": "transfer",
+  "status": "completed",
+  "source": {
+    "accountId": "ACC-99482-S",
+    "accountHolder": "John Doe",
+    "bank": "Global Trust Bank"
+  },
+  "destination": {
+    "accountId": "ACC-11029-D",
+    "accountHolder": "Jane Smith",
+    "bank": "First National Bank"
+  },
+  "amount": {
+    "value": 1000.00,
+    "currency": "USD"
+  },
+  "metadata": {
+    "description": "Monthly rent payment",
+    "referenceCode": "RENT-JUL-2026",
+    "ipAddress": "192.168.1.15"
+  }
+},
+    {
+        "transactionId": "TXN-8749302-A",
+        "timestamp": "2026-07-03T12:39:00Z",
+        "type": "transfer",
+        "status": "completed",
+        "source": {
+            "accountId": "ACC-99482-S",
+            "accountHolder": "John Doe",
+            "bank": "Global Trust Bank"
+        },
+        "destination": {
+            "accountId": "ACC-11029-D",
+            "accountHolder": "Jane Smith",
+            "bank": "First National Bank"
+        },
+        "amount": {
+            "value": 2000.00,
+            "currency": "USD"
+        },
+        "metadata": {
+            "description": "Monthly rent payment",
+            "referenceCode": "RENT-JUL-2026",
+            "ipAddress": "192.168.1.15"
+        }
+    }
+,
+    {
+        "transactionId": "TXN-8749302-A",
+        "timestamp": "2026-07-03T12:39:00Z",
+        "type": "transfer",
+        "status": "completed",
+        "source": {
+            "accountId": "ACC-99482-S",
+            "accountHolder": "John Doe",
+            "bank": "Global Trust Bank"
+        },
+        "destination": {
+            "accountId": "ACC-11029-D",
+            "accountHolder": "Jane Smith",
+            "bank": "First National Bank"
+        },
+        "amount": {
+            "value": 1500.00,
+            "currency": "USD"
+        },
+        "metadata": {
+            "description": "Monthly rent payment",
+            "referenceCode": "RENT-JUL-2026",
+            "ipAddress": "192.168.1.15"
+        }
+    }
+]
+
+suma = 0
+for transaction in experiment_json:
+    suma += experiment_json[transaction]["amount"]["value"]
+print(suma/len(experiment_json))
