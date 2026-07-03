@@ -47,6 +47,11 @@ TRANSACTIONS_DB = [
 # print(clean_names)
 
 
-balances = [5000, -1000, 250, -500]
-new_balances = [i * 1.1 if i < 0 else i for i in balances]
-print(new_balances)
+# balances = [5000, -1000, 250, -500]
+# new_balances = [i * 1.1 if i < 0 else i for i in balances]
+# print(new_balances)
+
+#
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_trancations = [ i for i in transactions if i > 10000]
+# print(vip_trancations)
