@@ -35,3 +35,69 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+# menu = {"Latte": 60, "Americano": 40}
+# print(f"Americano: {menu['Americano']}")
+#
+# menu["Latte"]=70
+# menu["Flat White"]=65
+#
+# print(f"Updated dict:n{menu}")
+# print(f"Cappucino: {menu.get("Cappucino","Undefined")}")
+
+# product = {"name": "Laptop", "price": 1000, "stock": 15}
+# product["price"]*=1.1
+# product["stock"]-=1
+# print(f"Updated product: {product}")
+
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"]="+380991234567"
+# user_profile.update({"is_premium": "False"})
+# user_profile.pop("discount")
+# print(user_profile)
+
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+# suma=0
+# for expense in expenses.values():
+#     suma+=expense
+# print(f"Sum: {suma}")
+
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# print(f"Average grade: {sum(grades.values())/len(grades.values())}")
+# suma=0
+# for grade in grades.values():
+#     suma+=grade
+# print(suma/len(grades))
+
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+# total_salary=0
+# total_employees=0
+# for key, dept in EMPLOYEE_DB.items():
+#     total_employees+=len(dept)
+#     dept_salary=0
+#     for employee in dept:
+#         total_salary+=dept[employee]["salary"]
+#         dept_salary+=dept[employee]["salary"]
+#     print(f"Average salary for {key}: {dept_salary/len(dept)}")
+# print(f"Average salary for all depts: {total_salary/total_employees}")
+
+# EMPLOYEE_DB["sales"]["diana"]["salry"]=3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
+
+active_clients=[transaction for transaction in TRANSACTIONS_DB
+                if transaction["status"]=="success"]
+print(active_clients)
+
+high_value_transactions=[transaction for transaction in TRANSACTIONS_DB if transaction["amount"]>=10000]
+print(high_value_transactions)
+
+refund=[transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"]=="Refund"]
+print(refund)
+
+total_revenue=sum([transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"]=="success"])
+print(total_revenue)
+
+rej_clients=[transaction["client"] for transaction in TRANSACTIONS_DB
+                if transaction["status"]=="failed"]
+print(*rej_clients)
