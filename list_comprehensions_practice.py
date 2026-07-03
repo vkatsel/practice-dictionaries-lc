@@ -67,18 +67,20 @@ RAW_PRICES = [
 
 
 
-RAW_PRICES = [
-    "$10.50",
-    "€20.00",
-    "$15.99",
-    "invalid",
-    "$5.00",
-    "$120.00",
-    "N/A"
-]
+# RAW_PRICES = [
+#     "$10.50",
+#     "€20.00",
+#     "$15.99",
+#     "invalid",
+#     "$5.00",
+#     "$120.00",
+#     "N/A"
+# ]
+#
+#
+# prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
+# print(*prices)
 
 
-prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
-print(*prices)
 
 
