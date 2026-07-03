@@ -71,15 +71,20 @@ TRANSACTIONS_DB = [
 #
 # print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
 
-total_salary = 0
-total_employees = 0
-for key, dept in EMPLOYEE_DB.items():
-    total_employees += len(dept)
+# total_salary = 0
+# total_employees = 0
+# for key, dept in EMPLOYEE_DB.items():
+#     total_employees += len(dept)
+#
+#     dept_sal = 0
+#     for employee in dept:
+#         total_salary += dept[employee]["salary"]
+#         dept_sal += dept[employee]["salary"]
+#     print(f"Average salary for {key}: {dept_sal/len(dept)}")
+# print(f"Average salary for all debts: {total_salary / total_employees}")
 
-    dept_sal = 0
-    for employee in dept:
-        total_salary += dept[employee]["salary"]
-        dept_sal += dept[employee]["salary"]
-    print(f"Average salary for {key}: {dept_sal/len(dept)}")
-print(f"Average salary for all debts: {total_salary / total_employees}")
+EMPLOYEE_DB["tech"].pop("charlie")
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+
+print(EMPLOYEE_DB)
 
