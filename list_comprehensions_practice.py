@@ -3,6 +3,32 @@
 # Використовується для Практичної №1
 # ==========================================
 
+
+
+
+# Ваш код для завдань нижче:
+gross_salaries = [15000, 22000, 18500, 31000]
+net_salaries = [salary*0.8 for salary in gross_salaries]
+print(net_salaries)
+
+
+raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+clean_names = [name.title() for name in raw_names]
+print(clean_names)
+
+
+
+balances = [5000, -1000, 250, -500]
+new_balances = [balance*1.1 if balance < 0 else balance for balance in balances]
+print(new_balances)
+
+
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [trans for trans in transactions if trans > 10000]
+print(vip_transactions)
+
+
+
 SERVER_LOGS = [
     "INFO: User logged in",
     "ERROR: Connection timeout",
@@ -13,6 +39,10 @@ SERVER_LOGS = [
     "INFO: User logged out"
 ]
 
+error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
+print(error_logs)
+
+
 RAW_PRICES = [
     "$10.50",
     "€20.00",
@@ -22,5 +52,5 @@ RAW_PRICES = [
     "$120.00",
     "N/A"
 ]
-
-# Ваш код для завдань нижче:
+clean_prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
+print(clean_prices)

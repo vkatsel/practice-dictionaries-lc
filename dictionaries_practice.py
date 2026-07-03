@@ -20,6 +20,64 @@ EMPLOYEE_DB = {
 
 # Ваш код для завдань нижче:
 
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -= 1
+product["price"] *= 1.1
+print(product)
+
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"] = "+380991234567"
+user_profile["is_premium"] = False
+user_profile.pop("discount")
+print(user_profile)
+
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+total = 0
+for key, value in expenses.items():
+    total += value
+print(total)
+
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+total = 0
+for value in grades.values():
+    total += value
+keys_count = len(grades.keys())
+print(total/keys_count)
+
+
+EMPLOYEE_DB = {
+    "tech": {
+        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+    },
+    "sales": {
+        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+    },
+    "hr": {
+        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+    }
+}
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+total =0
+count = 0
+for key, value in EMPLOYEE_DB.items():
+    for key, value in value.items():
+        total += value["salary"]
+        count += 1
+print(total/count)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+print(EMPLOYEE_DB)
+
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
@@ -35,3 +93,22 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+active_clients = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(active_clients)
+
+
+high_value_transactions = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] > 10000]
+print(high_value_transactions)
+
+
+refunds = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
+print(refunds)
+
+
+total_revenue = [transaction["amount"] for transaction in TRANSACTIONS_DB if  transaction["status"] == "success" and transaction["amount"] > 0]
+print(sum(total_revenue))
+
+
+blacklist = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]
+print(blacklist)
