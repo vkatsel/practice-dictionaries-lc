@@ -94,8 +94,23 @@ TRANSACTIONS_DB = [
 # print(total_salary)
 # print(total_employees)
 
-EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(EMPLOYEE_DB)
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
+#
 
-print(EMPLOYEE_DB)
+actives_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+
+print(*actives_clients)
+high_transaction = [transaction for transaction in TRANSACTIONS_DB if transaction["amount"] > 10000]
+
+print(*high_transaction)
+
+refund_transaction = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["category"] == "Refund"]
+print(*refund_transaction)
+
+incomes = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(sum(incomes))
+
+r_clients = [transaction["client"] for transaction in TRANSACTIONS_DB if transaction["status"] == "failed"]
+print(*r_clients)
