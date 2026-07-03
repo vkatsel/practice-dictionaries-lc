@@ -34,3 +34,7 @@ RAW_PRICES = [
 balances = [5000, -1000, 250, -500]
 new_balances = [balance*1.1 if balance <0 else balance for balance in balances]
 print(new_balances)
+
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [transaction for transaction in transactions if transaction >10000]
+print(vip_transactions)
