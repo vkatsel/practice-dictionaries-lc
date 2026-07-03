@@ -26,7 +26,16 @@ EMPLOYEE_DB = {
 #user_profile.pop("discount")
 #print(user_profile)
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-pure_grades = list(grades.values())
-average = sum(pure_grades) / len(pure_grades)
-print(f"Average grade: {average:.2f}")
+#grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+#pure_grades = list(grades.values())
+#average = sum(pure_grades) / len(pure_grades)
+#print(f"Average grade: {average:.2f}")
+
+
+menu = {"Latte": 60, "Americano": 40}
+americano_price = menu["Americano"]
+print(americano_price)
+menu["Latte"]=70
+menu["Cappuccino"]=65
+print(menu)
+print(menu.get("Flat White", "Empty"))
