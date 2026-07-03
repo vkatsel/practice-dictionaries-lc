@@ -17,6 +17,18 @@ EMPLOYEE_DB = {
         "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
     }
 }
+alise_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alise_salary)
+
+salary_total = 0
+employee_count = 0
+for dep in EMPLOYEE_DB.values():
+    for employee in dep.values():
+        salary_total += employee["salary"]
+        employee_count += 1
+average = salary_total / employee_count
+print (average)
+
 
 # Ваш код для завдань нижче:
 #Warm Up
@@ -58,10 +70,6 @@ for gr in grades.values():
     total += gr
 average = total/len(grades)
 print(average)
-
-
-
-
 
 
 
