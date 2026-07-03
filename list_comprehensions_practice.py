@@ -54,15 +54,31 @@ RAW_PRICES = [
 
 
 
-SERVER_LOGS = [
-    "INFO: User logged in",
-    "ERROR: Connection timeout",
-    "DEBUG: Query executed",
-    "ERROR: Database locked",
+# SERVER_LOGS = [
+#     "INFO: User logged in",
+#     "ERROR: Connection timeout",
+#     "DEBUG: Query executed",
+#     "ERROR: Database locked",
+# ]
+#
+# error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR")]
+#
+# print(error_logs)
+
+
+
+RAW_PRICES = [
+    "$10.50",
+    "€20.00",
+    "$15.99",
+    "invalid",
+    "$5.00",
+    "$120.00",
+    "N/A"
 ]
 
-error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR")]
 
-print(error_logs)
+prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
+print(*prices)
 
 
