@@ -84,3 +84,16 @@ TRANSACTIONS_DB = [
 # EMPLOYEE_DB["tech"].pop("charlie")
 # print(EMPLOYEE_DB)
 
+# active_clients = [ transactions for transactions in TRANSACTIONS_DB
+#                    if transactions["status"] == "success"]
+# print(active_clients)
+# big_amount = [a for a in TRANSACTIONS_DB if a["amount"] > 10000]
+# print(big_amount)
+# refund = [t["amount"] for t in TRANSACTIONS_DB if t["category"] == "Refund"]
+# print(refund)
+# incomes = [transactions["amount"] for transactions in TRANSACTIONS_DB
+#            if transactions["status"] == "success"]
+# print(sum(incomes))
+# rej_clients = [transactions["client"] for transactions in TRANSACTIONS_DB
+#                if transactions["status"] == "failed"]
+# print(*rej_clients)
