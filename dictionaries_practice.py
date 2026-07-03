@@ -19,6 +19,12 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+menu = {"Latte": 60, "Americano": 40}
+americano_price = menu["Americano"]
+menu["Latte"] = 70
+menu["Cappuccino"] = 65
+print(menu)
+print(menu.get("Flat White", "Nema"))
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
