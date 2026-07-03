@@ -77,8 +77,25 @@ RAW_PRICES = [
 # product["price"] *= 1.1
 # print(product)
 
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile["phone"] = "+380991234567"
-user_profile["is_premium"] = False
-removed = user_profile.pop("discount")
-print(user_profile)
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"] = "+380991234567"
+# user_profile["is_premium"] = False
+# removed = user_profile.pop("discount")
+# print(user_profile)
+
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+#
+# suma = 0
+# for expence in expenses.values():
+#     suma += expence
+# print(f"Suma is {suma}")
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+
+suma = 0
+count = 0
+
+for grade in grades.values():
+    suma += grade
+    count += 1
+print(suma/count)
