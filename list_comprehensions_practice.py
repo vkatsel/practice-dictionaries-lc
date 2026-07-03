@@ -42,6 +42,11 @@ RAW_PRICES = [
 # vip_transactions = [transaction for transaction in transactions if transaction >10000]
 # print(vip_transactions)
 
+#
+# error_logs =[log[7:] for log in SERVER_LOGS if log.startswith("ERROR")]
+# print(error_logs)
 
-error_logs =[log[7:] for log in SERVER_LOGS if log.startswith("ERROR")]
-print(error_logs)
+clear_prices =[price.replace("$", "") for price in RAW_PRICES if price.startswith("$")]
+clear_prices =[float(price) for price in clear_prices]
+
+print(clear_prices)
