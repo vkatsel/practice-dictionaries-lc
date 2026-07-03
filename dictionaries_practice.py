@@ -19,6 +19,55 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+# menu = {"Latte": 60, "Americano": 40}
+# menu["Latte"]=70
+# menu["Capuchino"]=65
+# print(menu)
+# print(menu.get("Flat White","дядя толік німа"))
+# product = {"name": "Laptop", "price": 1000, "stock": 15}
+# product["stock"]-=1
+# product["price"]*=1.1
+# print(product)
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"]="+380991234567"
+# user_profile["is_premium"]=False
+# user_profile.pop("discount")
+# print(user_profile)
+
+
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+# suma=0
+# for key, value in expenses.items():
+#     suma=suma+value
+# print(suma)
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# total=sum(grades.values())
+# average=total/len(grades)
+# print(average)
+
+
+# alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+# print(alice_salary)
+#
+# salary_total=0
+#
+# employee_count=0
+#
+# for dep in EMPLOYEE_DB.values():
+#     for employees in dep.values():
+#         salary_total+=employees["salary"]
+#         employee_count+=1
+# avg=salary_total/employee_count
+# print(avg)
+
+
+# EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
+
+
+
+
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
@@ -35,3 +84,16 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+active_clients=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "success"]
+print(active_clients)
+
+high_values_transactions=[tr for tr in TRANSACTIONS_DB if tr["amount"] > 10000]
+print(high_values_transactions)
+
+refund=[tr["amount"] for tr in TRANSACTIONS_DB if tr["category"] == "Refund"]
+print(refund)
+revenue_positive=[tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"] > 0 and tr["status"] =="success"]
+print(sum(revenue_positive))
+
+blacklist=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "failed"]
+print(blacklist)
