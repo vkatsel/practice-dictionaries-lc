@@ -61,9 +61,9 @@ EMPLOYEE_DB = {
 # print(avg)
 
 
-EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(EMPLOYEE_DB)
+# EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
 
 
 
@@ -84,4 +84,16 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+active_clients=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "success"]
+print(active_clients)
 
+high_values_transactions=[tr for tr in TRANSACTIONS_DB if tr["amount"] > 10000]
+print(high_values_transactions)
+
+refund=[tr["amount"] for tr in TRANSACTIONS_DB if tr["category"] == "Refund"]
+print(refund)
+revenue_positive=[tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"] > 0 and tr["status"] =="success"]
+print(sum(revenue_positive))
+
+blacklist=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "failed"]
+print(blacklist)
