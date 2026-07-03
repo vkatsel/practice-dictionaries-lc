@@ -35,3 +35,53 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"]=14
+product["price"]=1100
+print(product)
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"]= "+380991234567"
+user_profile["is_premium"] = False
+user_profile.pop("discount")
+print(user_profile)
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+print(sum([n for n in expenses.values()]))
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+bob=[n for n in grades.values()]
+yay=sum(bob)/len(bob)
+print(yay)
+
+alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+bob=[n for n in EMPLOYEE_DB.values()]
+shlyapa=[]
+for i in range(len(bob)):
+    for j in bob[i]:
+        shlyapa.append(bob[i][j]["salary"])
+yay=sum(shlyapa)/len(shlyapa)
+print(alice_salary)
+print(yay)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
+active_clients=[n["client"] for n in TRANSACTIONS_DB if n["status"] == "success"]
+print(active_clients)
+big_transactions = [n for n in TRANSACTIONS_DB if n["amount"]>10000]
+print(big_transactions)
+refunds=[n["amount"] for n in TRANSACTIONS_DB if n["category"] == "Refund"]
+print(refunds)
+amounts=[n["amount"] for n in TRANSACTIONS_DB if n["category"] != "Refund"]
+print(sum(amounts))
+obzvon_list=[n["client"] for n in TRANSACTIONS_DB if n["status"] == "failed"]
+print(obzvon_list)
+
+
+
+
+
+
