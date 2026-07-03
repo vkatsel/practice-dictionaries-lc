@@ -59,3 +59,20 @@ TRANSACTIONS_DB = [
 
 # grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 # print(sum(grades.values()) / len(grades))
+
+
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
+total_salary = 0
+total_employees = 0
+for dept in EMPLOYEE_DB.values():
+    total_employees += len(dept)
+    dept_salary = 0
+
+
+    for employee in dept:
+        total_salary += dept[employee]["salary"]
+        dept_salary += dept[employee]["salary"]
+
+    print(f"Average salary for {dept}: {dept_salary/len(dept)}")
+
+print(f"Average salary for all depts: {total_salary/total_employees}")
