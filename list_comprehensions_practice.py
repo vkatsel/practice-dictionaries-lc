@@ -74,3 +74,10 @@
 #     "N/A"]
 # pr = [log.replace('$','') for log in RAW_PRICES if log.startswith('$')]
 # print(pr)
+
+menu = {"Latte": 60, "Americano": 40}
+print(f'Americano {menu["Americano"]}')
+menu['Late'] = 70
+menu['Flat'] = 65
+print (f'updaed {menu}')
+print(f'capuccino {menu.get('capuccino', 'no')}')
