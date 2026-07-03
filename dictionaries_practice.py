@@ -55,15 +55,20 @@ TRANSACTIONS_DB = [
 # # 4. Ітерація (Цикли)
 # for key, value in user.items():
 #     print(f"{key}: {value}")
-
-menu = {"Latte": 60, "Americano": 40}
-print(f"Americano: {menu['Americano']}")
-
-menu["Latte"] = 70
-menu["Flat White"] = 65
-
-print(f"Updated menu: {menu}")
-print(f"Cappucino: {menu.get("Cappucino", "Unknown)}")
+#
+# menu = {"Latte": 60, "Americano": 40}
+# print(f"Americano: {menu['Americano']}")
+#
+# menu["Latte"] = 70
+# menu["Flat White"] = 65
+#
+# print(f"Updated menu: {menu}")
+# print(f"Cappucino: {menu.get("Cappucino", "Unknown)}")
 
 
 user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"] = "+380991234567"
+user_profile["is_premium"] = False
+user_profile.pop("discount")
+
+print(f"Updated user profile = {user_profile}")
