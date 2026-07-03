@@ -29,5 +29,5 @@ net_salaries = [p*0.8 for p in gross_salaries]
 print(net_salaries)
 
 raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
-clean_names = [name.lower().capitalize() for name in raw_names]
+clean_names = [name.title() for name in raw_names]
 print(clean_names)
