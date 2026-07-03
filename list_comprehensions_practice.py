@@ -40,3 +40,9 @@ print(with_fine)
 transactions = [1200, 15000, 450, 55000, 800]
 vip_transactions = [tr for tr in transactions if tr > 10000]
 print(vip_transactions)
+
+error_logs = [text[7:]for text in SERVER_LOGS if text.startswith("ERROR:")]
+print(error_logs)
+
+new_prices = [float(price[1:]) for price in RAW_PRICES if price.startswith("$")]
+print(new_prices)
