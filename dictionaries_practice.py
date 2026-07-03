@@ -40,6 +40,25 @@ user_profile["is_premium"] = False
 user_profile.pop("discount")
 print(user_profile)
 
+# №3
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+total = 0
+for key, value in expenses.items():
+    total += value
+print(f"Total expenses: {total}")
+
+# №4
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+count = 0
+total = 0
+for grade in grades.values():
+    count += 1
+    total += grade
+average_grade = total / count
+print(f"Average grade is {average_grade}")
+
+
+
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
