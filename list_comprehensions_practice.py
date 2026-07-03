@@ -45,15 +45,21 @@ RAW_PRICES = [
 # clean_names = [name.title() for name in raw_names]
 # print(clean_names)
 
-balances = [5000, -1000, 250, -500]
-balances_new = [balance + (balance * 0.1) if balance < 0 else balance
-                for balance in balances]
-print(balances_new)
+# balances = [5000, -1000, 250, -500]
+# balances_new = [balance + (balance * 0.1) if balance < 0 else balance
+#                 for balance in balances]
+# print(balances_new)
+#
+# status_bank = "good" if sum(balances) > 3000 else "bad"
+# print(f"Bank bancrupcy status: {status_bank}")
+#
+#
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [suma for suma in transactions if suma > 10000]
+# print(vip_transactions)
 
-status_bank = "good" if sum(balances) > 3000 else "bad"
-print(f"Bank bancrupcy status: {status_bank}")
+cleaned_messages = [log.replace("ERROR:", "") for log in SERVER_LOGS if log.startswith("ERROR")]
+print(cleaned_messages)
 
-
-transactions = [1200, 15000, 450, 55000, 800]
-vip_transactions = [suma for suma in transactions if suma > 10000]
-print(vip_transactions)
+valid_prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
+print(valid_prices)
