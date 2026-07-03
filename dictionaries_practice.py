@@ -47,15 +47,39 @@ TRANSACTIONS_DB = [
 # user_profile.pop("discount")
 # print(user_profile)
 
+
 # expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
 # suma = 0
 # for i in expenses.values():
 #     suma+=i
 # print(sum(expenses.values()))
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-# print(sum(grades.values())/len(grades.values()))
 
-suma = 0
-for grade in grades:
-    suma+=grades[grade]
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# # print(sum(grades.values())/len(grades.values()))
+#
+# suma = 0
+# for grade in grades:
+#     suma+=grades[grade]
+
+
+# print(EMPLOYEE_DB["tech"])
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+#
+#
+# suma = 0
+# length = 0
+# salaries=[]
+# for department in EMPLOYEE_DB:
+#     suma = 0
+#     length = 0
+#     for name in EMPLOYEE_DB[department]:
+#         suma+=EMPLOYEE_DB[department][name]["salary"]
+#         length+=1
+#     avg = suma/length
+#     print(f"{department} department's average salary: {suma/length}")
+
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
