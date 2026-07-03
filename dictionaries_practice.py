@@ -36,9 +36,21 @@ TRANSACTIONS_DB = [
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
 
-menu = {"Latte": 60, "Americano": 40}
-print(menu["Americano"])
-menu["Latte"] = 70
-menu["Cappucino"] = 65
-print(f"Updated menu: {menu}")
-print(f"Flat White: {menu.get("Flat White", "Undefined")}")
+# menu = {"Latte": 60, "Americano": 40}
+# print(menu["Americano"])
+# menu["Latte"] = 70
+# menu["Cappucino"] = 65
+# print(f"Updated menu: {menu}")
+# print(f"Flat White: {menu.get("Flat White", "Undefined")}")
+
+# product = {"name": "Laptop", "price": 1000, "stock": 15}
+# product["price"] = 1100
+# product["stock"] = 14
+# print(f"Updated product: {product}")
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"] = +380991234567
+user_profile["is premium"] = False
+removed = user_profile.pop("discount")
+print(user_profile)
+print(removed)
