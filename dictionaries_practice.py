@@ -35,3 +35,16 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+
+
+
+
+menu = {"Latte": 60, "Americano": 40}
+americano_price = menu["Americano"]
+print(americano_price)
+menu["Latte"] = 70
+menu["Capuccino"] = 65
+print(menu)
+print(menu.get("Flat White", "Nicht"))
+
