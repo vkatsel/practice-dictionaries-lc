@@ -32,6 +32,13 @@ for dep in EMPLOYEE_DB.values():
 avg = salary_total / employee_count
 print(f"Average salary: {avg}")
 
+# оновлення salary для diana
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+
+# видалення charlie
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
@@ -48,3 +55,19 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+active_clients = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="success"]
+print(f"Active clients: {active_clients}")
+
+high_value_transactions = [tr for tr in TRANSACTIONS_DB if tr["amount"] > 10000]
+print(f"High value transactions: {high_value_transactions}")
+
+refunds = [tr["amount"] for tr in TRANSACTIONS_DB if tr["category"] == "Refund"]
+print(f"Refunds: {refunds}")
+
+pos_transactions = [tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"] > 0 and tr["status"]=="success"]
+total = sum(pos_transactions)
+print(f"Total successful transactions: {total}")
+
+blacklist = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "failed"]
+print(f"Blacklist: {blacklist}")
