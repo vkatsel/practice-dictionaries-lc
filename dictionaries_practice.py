@@ -58,6 +58,28 @@ print(average_grade)
 alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
 print(alice_salary)
 
+salary_total= 0
+employee_count= 0
+for dep in EMPLOYEE_DB.values():
+    for employee in dep.values():
+        salary_total += employee["salary"]
+        employee_count += 1
+
+avg=salary_total/employee_count
+print(avg)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+charlie = EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
+
+
+
+
+
+
+
+
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
@@ -73,3 +95,18 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+active_clients= [tr["client"] for tr in TRANSACTIONS_DB if tr["status"] =="success"]
+print(f"Active_clients: {active_clients}")
+
+high_value_transactions=[tr for tr in TRANSACTIONS_DB if tr["amount"] > 10000]
+print(f"High_value_transactions: {high_value_transactions}")
+
+refunds = [tr["amount"] for tr in TRANSACTIONS_DB if  tr["category"] == "Refund"] #знач в ключі == рефанд
+print(f"Refunds: {refunds}")
+
+pos_transactions=[tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"] > 0 and tr["status"] == "success"]
+total = sum(pos_transactions)
+print(f"Total successful transactions: {total}")
+
+blacklist= [tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "failed"]
+print(f"Blacklist: {blacklist}")
