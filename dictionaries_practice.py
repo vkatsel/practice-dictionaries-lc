@@ -19,7 +19,48 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+menu = {"Latte": 60, "Americano": 40}
+americano_price = menu["Americano"]
+menu["Latte"]= 70
+menu["Cappuccino"]=65
+print(menu)
+print(menu.get("Flat White","Nema"))
 
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -= 1
+product["price"] *= 1.1
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"]="+380991234567"
+user_profile["is_premium"]=False
+user_profile.pop("discount")
+print(user_profile)
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+total=0
+for ex in expenses.values():
+    total += ex
+print(f"Total expenses: {total}")
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+average = sum(grades.values())/len(grades)
+print(f"Average grade: {average}")
+
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
+salary_total=0
+employee_count = 0
+for department in EMPLOYEE_DB.values():
+    for employee in department.values():
+        salary_total += employee["salary"]
+        employee_count += 1
+
+print(f"Average salary: {salary_total/employee_count}")
+
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
@@ -35,3 +76,18 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+active_clients = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="success"]
+print(active_clients)
+
+high_values_transactions = [tr for tr in TRANSACTIONS_DB if tr["amount"]>10000]
+print(high_values_transactions)
+
+refunds = [tr["amount"] for tr in TRANSACTIONS_DB if tr["category"]=="Refund"]
+print (f"Refunds: {refunds}")
+
+total_revenue = sum([tr["amount"] for tr in TRANSACTIONS_DB if tr["status"]=="success" and tr["amount"]>0])
+print(total_revenue)
+
+blacklist = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="failed"]
+print(blacklist)
