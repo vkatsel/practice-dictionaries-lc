@@ -43,6 +43,19 @@ RAW_PRICES = [
 # error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
 # print(error_logs)
 
-clear_prices = [price.replace("$", "") for price in RAW_PRICES if price.startswith("$")]
-clear_prices = [float(price) for price in clear_prices]
-print(clear_prices)
+# clear_prices = [price.replace("$", "") for price in RAW_PRICES if price.startswith("$")]
+# clear_prices = [float(price) for price in clear_prices]
+# print(clear_prices)
+
+menu = {"Latte": 60, "Americano": 40}
+americano_price = menu["Americano"]
+print(americano_price)
+menu["Latte"] = 70
+menu["Cappucino"] = 65
+print(menu)
+print(menu.get("Flat white", "Nema"))
+
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -=1
+product["price"] *= 1.1
+
