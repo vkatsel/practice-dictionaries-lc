@@ -53,8 +53,23 @@ TRANSACTIONS_DB = [
 # print(f"Updated product: {product}")
 
 
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile['phone'] = "+380991234567"
-user_profile["is_premium"] = False
-removed = user_profile.pop("discount")
-print(f"Updated profile is: {user_profile}")
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile['phone'] = "+380991234567"
+# user_profile["is_premium"] = False
+# removed = user_profile.pop("discount")
+# print(f"Updated profile is: {user_profile}")
+
+
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+#
+# print(sum(list(expenses.values())))
+#
+# suma = 0
+# for expense in expenses.values():
+#     suma += expense
+# print(f"Sum: {suma}")
+
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+average_grade = sum(grades.values()) / len(grades)
+print(f"Average grade: {average_grade}")
