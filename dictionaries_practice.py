@@ -57,7 +57,29 @@ for grade in grades.values():
 average_grade = total / count
 print(f"Average grade is {average_grade}")
 
-
+# №5
+EMPLOYEE_DB = {
+    "tech": {
+        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+    },
+    "sales": {
+        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+    },
+    "hr": {
+        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+    }
+}
+print("Зарплата Аліси становить", EMPLOYEE_DB["tech"]["alice"]["salary"])
+total = 0
+count = 0
+for key, value in EMPLOYEE_DB.items():
+    for key, value in value.items():
+        count += 1
+        total += value["salary"]
+print("Розрахована середня зарплата становить", total/count)
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
