@@ -71,4 +71,13 @@ TRANSACTIONS_DB = [
 #         department_salery += department[emp]["salary"]
 #     print(f"Average salary for {key}: {department_salery/len(department)}")
 # print(f"Average salery for all departments: {total_salery/total_emp}")
+TRANSACTIONS_DB = [
+    {"id": 1, "client": "Alice", "amount": 1200, "category": "Electronics", "status": "success"},
+    ...
+high_value = [t for t in TRANSACTIONS_DB if t["amount"]>10000]
+print(high_value)
+refund = [t["amount"] for t in TRANSACTIONS_DB if t["category"] = "Refund"]
+print(refund)
 
+incoms = [transaction ["amount"] for transaction in TRANSACTIONS_DB if transaction ["status"] = "success"]
+print(sum(incoms))
