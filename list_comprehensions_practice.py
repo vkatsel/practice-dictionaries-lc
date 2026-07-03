@@ -58,8 +58,9 @@ RAW_PRICES = [
 # vip_transactions = [suma for suma in transactions if suma > 10000]
 # print(vip_transactions)
 
-cleaned_messages = [log.replace("ERROR:", "") for log in SERVER_LOGS if log.startswith("ERROR")]
-print(cleaned_messages)
+# cleaned_messages = [log.replace("ERROR:", "") for log in SERVER_LOGS if log.startswith("ERROR")]
+# print(cleaned_messages)
+#
+# valid_prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
+# print(valid_prices)
 
-valid_prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
-print(valid_prices)
