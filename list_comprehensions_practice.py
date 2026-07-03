@@ -24,3 +24,37 @@ RAW_PRICES = [
 ]
 
 # Ваш код для завдань нижче:
+
+# numbers = [1, 2, 3, 4, 5]
+# results = []
+#
+# for num in numbers:
+#     squared = num ** 2
+#     results.append(squared)
+#
+# print(results)
+#
+# result_2 = [num ** 2 for num in numbers]
+# print(result_2)
+
+# gross_salaries = [15000, 22000, 18500, 31000]
+# net_salaries = [salary - (salary * 0.2) for salary in gross_salaries]
+# print(f"Net salaries: {net_salaries}")
+
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [name.title() for name in raw_names]
+# print(clean_names)
+
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [transaction * 2 if transaction % 2 == 0 else transaction / 2
+#                     for transaction in transactions if transaction > 10000]
+# print(vip_transactions)
+#
+# data = [10, -5, 20, -1]
+# clean_data = [0 if x < 0  else x for x in data]
+                     #як саме                                                             #які дані
+# cleaned_messages = [log.replace("ERROR:", "").strip() for log in SERVER_LOGS if log.startswith("ERROR")]
+# print(cleaned_messages)
+
+good_prices = [price.replace("$", "") for price in RAW_PRICES if price.startswith("$")]
+print(good_prices)
