@@ -39,6 +39,15 @@ RAW_PRICES = [
 # net_seleries = [seleries - (seleries * 0.2) for seleries in gross_salaries]
 #
 # print(net_seleries)
-raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
-clean_names = [i.title() for i in raw_names]
-print(clean_names)
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [i.title() for i in raw_names]
+# print(clean_names)
+# balances = [5000, -10000, 250, -500]
+# new_balances = [i * 1.1 if i < 0 else i for i in balances]
+# print(new_balances)
+#
+# status_bank = "good" if sum(balances) > 3000 else "bad"
+# print(f"status_bank:{status_bank}")
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [i for i in transactions if i > 10000]
+print(vip_transactions)
