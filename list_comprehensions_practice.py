@@ -12,6 +12,8 @@ SERVER_LOGS = [
     "ERROR: File not found",
     "INFO: User logged out"
 ]
+errorlogs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
+print(errorlogs)
 
 RAW_PRICES = [
     "$10.50",
