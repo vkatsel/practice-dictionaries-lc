@@ -35,11 +35,17 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+#
+# #
+# product = {"name": "Laptop", "price": 1000, "stock": 15}
+# product["price"] *= 1
+# print["stock"] -= 1
+# print(f"Updated product: {product}")
 
-menu = {"Latte": 60, "Americano": 40}
-print(f"Americano: {menu["Americano"]}")
 
-menu["Latte"] = 70
-menu["Flat-white"] = 65
-print(f"Updated dict: {menu}")
-print(f"Cappucino: {menu.get("Cappucino", "Undefined" )}")
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+user_profile["phone"] = "+380991234567"
+user_profile["is_premium"] = False
+removed = user_profile.pop("discount")
+print(f"Updated profile: {user_profile}")
