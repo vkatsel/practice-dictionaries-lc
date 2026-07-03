@@ -57,6 +57,14 @@ for i in expenses.values():
     suma+=i
 print(suma)
 
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+average_grade=sum(grades.values())/len(grades)
+print(average_grade)
+
+total=0
+for i in grades.values():
+    total+=i
+print(total/len(grades))
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
