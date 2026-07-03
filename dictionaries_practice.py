@@ -70,6 +70,29 @@ TRANSACTIONS_DB = [
 # print(f"Sum: {suma}")
 
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-average_grade = sum(grades.values()) / len(grades)
-print(f"Average grade: {average_grade}")
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# average_grade = sum(grades.values()) / len(grades)
+# print(f"Average grade: {average_grade}")
+
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
+# total_salary = 0
+# total_employees = 0
+# for key, dept in EMPLOYEE_DB.items():
+#     total_employees += len(dept)
+#     dept_sal = 0
+#
+#     for employee in dept:
+#         total_salary += dept[employee]["salary"]
+#         dept_sal += dept[employee]["salary"]
+#
+#     print(f"Average salary for {dept}: {dept_sal/len(dept)}")
+# print(f"Total salary for all depts: {total_salary/total_employees}")
+
+
+active_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(active_clients)
+
+incomes = [transaction["amount"] for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
+print(sum(incomes))
+
+rej_clients = [transaction for transaction in TRANSACTIONS_DB if transaction["status"] == "success"]
