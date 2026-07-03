@@ -57,6 +57,10 @@ for department in EMPLOYEE_DB.values():
         employee_count += 1
 
 print(f"Average salary: {salary_total/employee_count}")
+
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
@@ -72,3 +76,4 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
