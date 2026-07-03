@@ -1,6 +1,20 @@
 # ==========================================
 # БАЗА ДАНИХ КОМПАНІЇ (СЛОВНИК)
 # Використовується для Практичної №1
+EMPLOYEE_DB = {
+    "tech": {
+        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+    },
+    "sales": {
+        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+    },
+    "hr": {
+        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+    }
+}
 # ==========================================
 
 # Ваш код для завдань нижче:
@@ -50,25 +64,21 @@ TRANSACTIONS_DB = [
 
 # print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
 
-EMPLOYEE_DB = {
-    "tech": {
-        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
-        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
-        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
-    },
-    "sales": {
-        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
-        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
-    },
-    "hr": {
-        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
-    }
-}
-total_salary=0
-total_employee=0
-for department in EMPLOYEE_DB.values():
-    total_employee += len(department)
+# total_salary=0
+# total_employee=0
+# for department in EMPLOYEE_DB.values():
+#     total_employee += len(department)
+#
+#     for employee in department:
+#         total_salary += department[employee]["salary"]
+# print(total_salary)
 
-    for employee in department:
-        total_salary += department[employee]["salary"]
-print(total_salary)
+active_clients=[transaction["client"] for transaction in TRANSACTIONS_DB
+                if transaction["status"] == "success"]
+print(active_clients)
+
+high_value=[trans for trans in TRANSACTIONS_DB if trans["amount"] >= 10000]
+print(high_value)
+
+refund=[trans["amount"] for trans in TRANSACTIONS_DB if trans["category"]=="Refund"]
+print(refund)
