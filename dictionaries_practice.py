@@ -41,6 +41,12 @@ user_profile["is_premium"] = False
 discount = user_profile.pop("discount")
 print(user_profile)
 
+#3
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+total = 0
+for ex in expenses.values():
+    total += ex
+print(f"Total expenses: {total}")
 
 
 
