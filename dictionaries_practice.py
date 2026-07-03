@@ -100,6 +100,28 @@ EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
 EMPLOYEE_DB["tech"].pop("charlie")
 print(EMPLOYEE_DB)
 
+# №7
+TRANSACTIONS_DB = [
+    {"id": 1, "client": "Alice", "amount": 1200, "category": "Electronics", "status": "success"},
+    {"id": 2, "client": "Bob", "amount": 450, "category": "Groceries", "status": "success"},
+    {"id": 3, "client": "Charlie", "amount": -150, "category": "Refund", "status": "success"},
+    {"id": 4, "client": "Diana", "amount": 55000, "category": "Auto", "status": "pending"},
+    {"id": 5, "client": "Eve", "amount": 800, "category": "Electronics", "status": "failed"},
+    {"id": 6, "client": "Frank", "amount": 200, "category": "Groceries", "status": "success"},
+    {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
+    {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
+]
+active_clients = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="success"]
+print(active_clients)
+high_values_transactions = [tr for tr in TRANSACTIONS_DB if tr["amount"]>10000]
+print(high_values_transactions)
+refunds = [tr["amount"] for tr in TRANSACTIONS_DB if tr["category"]=="Refund"]
+print(refunds)
+total_revenue = [tr["amount"] for tr in TRANSACTIONS_DB if tr["amount"]>0 and tr["status"]=="success"]
+print(sum(total_revenue))
+black_list = [tr["client"] for tr in TRANSACTIONS_DB if tr["status"]=="failed"]
+print(black_list)
+
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
