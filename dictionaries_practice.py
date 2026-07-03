@@ -77,6 +77,11 @@ for dep in EMPLOYEE_DB.values():
         count+=1
 averag=total/count
 print("Average salary: "+str(averag))
+
+#оновлення salary для diana і видалення charlie
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
