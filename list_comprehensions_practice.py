@@ -31,3 +31,7 @@ print(net_salaries)
 raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
 clean_names = [name.title() for name in raw_names]
 print(clean_names)
+
+balances = [5000, -1000, 250, -500]
+newbalances = [p * 1.1 if p<0 else p for p in balances]
+print(newbalances)
