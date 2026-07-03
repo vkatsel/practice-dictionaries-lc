@@ -71,3 +71,12 @@ grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 
 avggrade = sum(grades.values())/len(grades)
 print(avggrade)
+
+totalgrades = 0
+counter = 0
+for grade in grades.values():
+    totalgrades += grade
+    counter += 1
+avggrade = totalgrades/counter
+avggrade = totalgrades/len(grades)
+print(avggrade)
