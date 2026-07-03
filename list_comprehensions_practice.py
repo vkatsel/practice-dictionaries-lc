@@ -24,3 +24,63 @@ RAW_PRICES = [
 ]
 
 # Ваш код для завдань нижче:
+
+
+# gross_salaries = [15000, 22000, 18500, 31000]
+#
+# net_salaries = [sal * 0.8 for sal in gross_salaries]
+#
+# print(net_salaries)
+#
+#
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+#
+# new_names = [name.title() for name in raw_names]
+# print(new_names)
+
+
+# balances = [5000, -1000, 250, -500]
+#
+# with_fine = [bal *1.1 if bal < 0 else bal for bal in balances]
+#
+# print(with_fine)
+
+
+# transactions = [1200, 15000, 450, 55000, 800]
+#
+# vip_transactions = [transaction for transaction in transactions if transaction > 10000]
+#
+# print("vip_transactions: " , *vip_transactions)
+
+
+
+# SERVER_LOGS = [
+#     "INFO: User logged in",
+#     "ERROR: Connection timeout",
+#     "DEBUG: Query executed",
+#     "ERROR: Database locked",
+# ]
+#
+# error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR")]
+#
+# print(error_logs)
+
+
+
+# RAW_PRICES = [
+#     "$10.50",
+#     "€20.00",
+#     "$15.99",
+#     "invalid",
+#     "$5.00",
+#     "$120.00",
+#     "N/A"
+# ]
+#
+#
+# prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
+# print(*prices)
+
+
+
+
