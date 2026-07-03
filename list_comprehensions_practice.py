@@ -50,6 +50,12 @@ RAW_PRICES = [
 #                 for transaction in transactions if transaction>10000]
 # print(vip_transactions)
 
-data=[10, -5, 20, -1]
-clean_data=[0 if x<0 else x for x in data]
-print(clean_data)
+# data=[10, -5, 20, -1]
+# clean_data=[0 if x<0 else x for x in data]
+# print(clean_data)
+
+# cleane_messages = [log.replace("ERROR:", " ").strip() for log in SERVER_LOGS if log.startswith("ERROR")]
+# print(cleane_messages)
+
+clean_prices=[float(price[1:]) for price in RAW_PRICES if price.startswith("$")]
+print(clean_prices)
