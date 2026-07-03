@@ -50,7 +50,27 @@
 # print(balanses_new)
 # status = 'good' if sum(balances) > 3000 else 'bad'
 # print(f'nnn {status}')
+#
+# transactions = [1200, 15000, 450, 55000, 800]
+# s = [i for i in transactions if i > 1000]
+# print(s)
+#
+# SERVER_LOGS = [
+#     "INFO: User logged in",
+#     "ERROR: Connection timeout",
+#     "DEBUG: Query executed",
+#     "ERROR: Database locked",
+# ]
+# cl_m = [log.replace('ERROR','').strip() for log in SERVER_LOGS if log.startswith('ERROR')]
+# print(cl_m)
 
-transactions = [1200, 15000, 450, 55000, 800]
-s = [i for i in transactions if i > 1000]
-print(s)
+# RAW_PRICES = [
+#     "$10.50",
+#     "€20.00",
+#     "$15.99",
+#     "invalid",
+#     "$5.00",
+#     "$120.00",
+#     "N/A"]
+# pr = [log.replace('$','') for log in RAW_PRICES if log.startswith('$')]
+# print(pr)
