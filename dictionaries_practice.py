@@ -76,17 +76,42 @@ TRANSACTIONS_DB = [
 
 # print(EMPLOYEE_DB["tech"]["alice"]["salary"])
 
-total_salary = 0
-total_employees = 0
-for key, department in EMPLOYEE_DB.items():
-    total_employees += len(department)
+# total_salary = 0
+# total_employees = 0
+# for key, department in EMPLOYEE_DB.items():
+#     total_employees += len(department)
+#
+#     dept_sal = 0
+#     for employee in department:
+#         total_salary += department[employee]["salary"]
+#         dept_sal += department[employee]["salary"]
+#
+#     print(f"Average salary for {key}: {dept_sal/len(department)}")
+#
+# print(f"Average salary overall: {total_salary/total_employees}")
 
-    dept_sal = 0
-    for employee in department:
-        total_salary += department[employee]["salary"]
-        dept_sal += department[employee]["salary"]
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
 
-    print(f"Average salary for {key}: {dept_sal/len(department)}")
 
-print(f"Average salary overall: {total_salary/total_employees}")
+# active_clients = [transaction for transaction in TRANSACTIONS_DB
+#                   if transaction["status"] == "success"]
+#
+# print(active_clients)
+#
+# high_clients = [transaction for transaction in TRANSACTIONS_DB
+#                 if transaction["amount"] > 10000]
+# print(high_clients)
+#
+# refund_clients = [transaction["amount"] for transaction in TRANSACTIONS_DB
+#                   if transaction["category"] == "Refund"]
+# print(refund_clients)
 
+# incomes = [transaction["amount"] for transaction in TRANSACTIONS_DB
+#            if transaction["status"] == "success"]
+# print(sum(incomes))
+
+black_list = [transaction["client"] for transaction in TRANSACTIONS_DB
+           if transaction["status"] == "failed"]
+print(*black_list)
