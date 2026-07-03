@@ -6,7 +6,7 @@ from os import remove
 
 EMPLOYEE_DB = {
     "tech": {
-        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "alice": {"role": "Data Scientist", "salary": [4500,5000,5500], "status": "active"},
         "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
         "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
     },
@@ -66,5 +66,21 @@ TRANSACTIONS_DB = [
 # grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
 # print(sum(grades.values())/4)
 
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
 
+# total_employee = 0
+# total_salary = 0
+# for key, dept in EMPLOYEE_DB.items():
+#     total_employee += len(dept)
+#     dept_sal = 0
+#
+#     for emloyee in dept:
+#        total_salary += dept[emloyee]["salary"]
+#        dept_sal += dept[emloyee]["salary"]
+#     print(f"Average salary for {key}: {dept_sal/len(dept)}")
+# print(f"Total salary for all dept: {total_salary/total_employee}")
+
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
 
