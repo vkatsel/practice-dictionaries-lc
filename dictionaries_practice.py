@@ -3,20 +3,6 @@
 # Використовується для Практичної №1
 # ==========================================
 
-EMPLOYEE_DB = {
-    "tech": {
-        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
-        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
-        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
-    },
-    "sales": {
-        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
-        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
-    },
-    "hr": {
-        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
-    }
-}
 
 # Ваш код для завдань нижче:
 
@@ -59,8 +45,37 @@ TRANSACTIONS_DB = [
 #     sum += expense
 # print(sum)
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-grades_sum = sum(grades.values())
-amount_of_students = len(grades.keys())
-average_grade = grades_sum / amount_of_students
-print(average_grade)
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# grades_sum = sum(grades.values())
+# amount_of_students = len(grades.keys())
+# average_grade = grades_sum / amount_of_students
+# print(average_grade)
+
+EMPLOYEE_DB = {
+    "tech": {
+        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+    },
+    "sales": {
+        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+    },
+    "hr": {
+        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+    }
+}
+
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+# total_salary = 0
+# total_employees = 0
+# for department in EMPLOYEE_DB.values():
+#     total_employees += len(department)
+#     for employee in department:
+#         total_salary += department[employee]["salary"]
+#
+# print(total_salary/total_employees)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+remove = EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
