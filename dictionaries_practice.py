@@ -35,3 +35,35 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+#
+# # 1. Створення словника
+# user = {"name": "Alice", "age": 25}
+# empty_dict = {}
+#
+# # 2. Читання, Додавання та Оновлення
+# print(user["name"])       # Alice
+# user["balance"] = 100     # Додає новий ключ
+# user["age"] = 26          # Оновлює існуючий ключ
+#
+# # 3. Безпечний доступ та Видалення
+# # .get() не видає помилку, якщо ключа немає
+# phone = user.get("phone", "Невідомо")
+#
+# # .pop() видаляє пару і повертає значення
+# age = user.pop("age")
+#
+# # 4. Ітерація (Цикли)
+# for key, value in user.items():
+#     print(f"{key}: {value}")
+
+menu = {"Latte": 60, "Americano": 40}
+print(f"Americano: {menu['Americano']}")
+
+menu["Latte"] = 70
+menu["Flat White"] = 65
+
+print(f"Updated menu: {menu}")
+print(f"Cappucino: {menu.get("Cappucino", "Unknown)}")
+
+
+user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
