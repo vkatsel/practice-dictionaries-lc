@@ -28,11 +28,19 @@ EMPLOYEE_DB = {
 # product["stock"]-=1
 # product["price"]*=1.1
 # print(product)
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile["phone"]="+380991234567"
-user_profile["is_premium"]=False
-user_profile.pop("discount")
-print(user_profile)
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"]="+380991234567"
+# user_profile["is_premium"]=False
+# user_profile.pop("discount")
+# print(user_profile)
+
+
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+suma=0
+for key, value in expenses.items():
+    suma=suma+value
+print(suma)
+
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
