@@ -59,3 +59,9 @@ RAW_PRICES = [
 # data = [10, -5, 20, -1]
 # clean_data = [0 if x < 0 else x for x in data]
 # print(clean_data)
+
+# cleanad_messages = [log.replace("ERROR:", "").strip() for log in SERVER_LOGS if log.startswith("ERROR")]
+# print(cleanad_messages)
+
+# new_prices = [float(p[1:]) for p in RAW_PRICES if p.startswith("$")]
+# print(new_prices)
