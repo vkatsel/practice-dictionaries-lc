@@ -54,6 +54,10 @@ print(average_grade)
 #avg= total_grades/len(grades)
 #print(avg)
 
+
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
