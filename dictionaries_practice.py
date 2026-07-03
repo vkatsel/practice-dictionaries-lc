@@ -19,7 +19,18 @@ EMPLOYEE_DB = {
 }
 
 # Ваш код для завдань нижче:
+menu = {"Latte": 60, "Americano": 40}
+price_am=menu["Americano"]
+print(price_am)
+menu["Latte"]=70
+menu["Americano"]=65
+print(menu)
+print(menu.get("Flat White","Nope"))
 
+product = {"name": "Laptop", "price": 1000, "stock": 15}
+product["stock"] -= 1
+product["price"] *= 1.1
+print(product)
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
