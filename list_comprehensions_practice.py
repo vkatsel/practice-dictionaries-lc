@@ -39,7 +39,18 @@
 # gross_salaries = [15000, 22000, 18500, 31000]
 # net_salaries = [salary - salary* 0.2 for salary in gross_salaries]
 # print( net_salaries )
+#
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [names.title() for names in raw_names]
+# print(clean_names)
+#
+# balances = [5000, -1000, 250, -500]
+# balanses_new = [b + (b * 0.1) if b < 0 else b
+#     for b in balances]
+# print(balanses_new)
+# status = 'good' if sum(balances) > 3000 else 'bad'
+# print(f'nnn {status}')
 
-raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
-clean_names = [names.title() for names in raw_names]
-print(clean_names)
+transactions = [1200, 15000, 450, 55000, 800]
+s = [i for i in transactions if i > 1000]
+print(s)
