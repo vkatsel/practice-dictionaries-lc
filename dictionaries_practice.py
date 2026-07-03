@@ -66,9 +66,24 @@ TRANSACTIONS_DB = [
 # print(f"Cappucino: {menu.get("Cappucino", "Unknown)}")
 
 
-user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
-user_profile["phone"] = "+380991234567"
-user_profile["is_premium"] = False
-user_profile.pop("discount")
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"] = "+380991234567"
+# user_profile["is_premium"] = False
+# user_profile.pop("discount")
+#
+# print(f"Updated user profile = {user_profile}")
 
-print(f"Updated user profile = {user_profile}")
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+#
+# suma = 0
+# for expense in expenses.values():
+#     suma += expense
+#
+# print(suma)
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+suma = 0
+for grade in grades.values():
+    suma += grade
+
+print(f"average: {suma/len(grades)}")
