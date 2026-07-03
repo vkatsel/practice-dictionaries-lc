@@ -79,8 +79,11 @@ TRANSACTIONS_DB = [
 
 
 
-EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
-EMPLOYEE_DB["tech"].pop("charlie")
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+#
+# print(EMPLOYEE_DB)
 
-print(EMPLOYEE_DB)
+
+
 
