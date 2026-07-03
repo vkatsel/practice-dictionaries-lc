@@ -65,3 +65,4 @@
 # RAW_PRICES = ["$10.5", "hello", "$15.99", "text", "$5.0"]
 # prices = [float(price.replace("$", "")) for price in RAW_PRICES if price.startswith("$")]
 # print(prices)
+
