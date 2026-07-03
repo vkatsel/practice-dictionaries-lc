@@ -23,6 +23,9 @@ TRANSACTIONS_DB = [
 # print(clean_names)
 # balances = [5000, -1000, 250, -500]
 # print([b*1.1 if b<0 else b for b in balances])
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [t for t in transactions if t>10000]
+print(vip_transactions)
 # Refunds = [t["amount"] for t in TRANSACTIONS_DB if t["category"]== "Refund"]
 # print(Refunds)
 # Total = sum([t["amount"] for t in TRANSACTIONS_DB if t["status"] == "success"])
