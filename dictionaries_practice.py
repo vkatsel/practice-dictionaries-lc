@@ -42,3 +42,11 @@ TRANSACTIONS_DB = [
 menu = {"Latte": 60, "Americano": 40}
 americano_price = menu["Americano"]
 print(americano_price)
+
+menu["Latte"]=70
+menu["Cappuccino"]=65
+
+print(menu)
+
+print(menu.get("Flat White", "Nema"))
+
