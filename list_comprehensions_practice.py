@@ -32,13 +32,17 @@ RAW_PRICES = [
 # clean_names = [name.title() for name in raw_names]
 # print(*clean_names)
 
-balances = [5000, -1000, 250, -500]
-with_fine = [bal*1.1 if bal<0 else bal for bal in balances]
-print(*with_fine)
+# balances = [5000, -1000, 250, -500]
+# with_fine = [bal*1.1 if bal<0 else bal for bal in balances]
+# print(*with_fine)
+#
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_trans = [transaction for transaction in transactions if transaction > 10000]
+# print(*vip_trans)
+#
+# error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
+# print(error_logs)
 
-transactions = [1200, 15000, 450, 55000, 800]
-vip_trans = [transaction for transaction in transactions if transaction > 10000]
-print(*vip_trans)
-
-error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:")]
-print(error_logs)
+clear_prices = [price.replace("$", "") for price in RAW_PRICES if price.startswith("$")]
+clear_prices = [float(price) for price in clear_prices]
+print(clear_prices)
