@@ -24,3 +24,15 @@ RAW_PRICES = [
 ]
 
 # Ваш код для завдань нижче:
+
+# numbers = [i ** 2 for i in range (1,6)]
+# print(numbers)
+
+# gross_salaries = [15000, 22000, 18500, 31000]
+# net_salaries = [salary - (salary * 0.2) for salary in gross_salaries]
+# print(net_salaries)
+
+# raw_names = ["aLice", "BOB", "charlie", "dIAnA"]
+# clean_names = [names.title() for names in raw_names]
+# print(clean_names)
+
