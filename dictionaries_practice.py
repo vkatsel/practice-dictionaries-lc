@@ -104,6 +104,21 @@ TRANSACTIONS_DB = [
 #
 # print(f"Total salary for all depts: {total_salary / total_employees}")
 
-EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
-EMPLOYEE_DB["tech"].pop("charlie")
-print(f"New EMPLOYEE_DB = {EMPLOYEE_DB}")
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(f"New EMPLOYEE_DB = {EMPLOYEE_DB}")
+
+active_clients = [transaction for transaction in TRANSACTIONS_DB
+           if transaction["status"] == "success"]
+
+print(active_clients)
+
+high_value_clients = [amount for amount in TRANSACTIONS_DB
+           if amount["amount"] > 10000]
+
+print(high_value_clients)
+
+refund = [amount["amount"] for amount in TRANSACTIONS_DB
+           if amount["category"] == "Refund"]
+
+print(refund)
