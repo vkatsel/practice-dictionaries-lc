@@ -33,6 +33,50 @@ user_profile.pop("discount")
 print(user_profile)
 
 
+expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+total = 0
+for key, value in expenses.items():
+    total += value
+print(total)
+
+
+grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+total = 0
+for value in grades.values():
+    total += value
+keys_count = len(grades.keys())
+print(total/keys_count)
+
+
+EMPLOYEE_DB = {
+    "tech": {
+        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
+        "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
+    },
+    "sales": {
+        "diana": {"role": "Sales Manager", "salary": 3000, "status": "active"},
+        "eve": {"role": "Account Executive", "salary": 3200, "status": "active"}
+    },
+    "hr": {
+        "frank": {"role": "HR Specialist", "salary": 2500, "status": "active"}
+    }
+}
+alice_salary = EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+total =0
+count = 0
+for key, value in EMPLOYEE_DB.items():
+    for key, value in value.items():
+        total += value["salary"]
+        count += 1
+print(total/count)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+print(EMPLOYEE_DB)
+
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
 
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
