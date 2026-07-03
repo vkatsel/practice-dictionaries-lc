@@ -35,3 +35,23 @@ new_nanes = [name.title() for name in raw_names]
 print (new_nanes)
 
 #3
+balances = [5000, -1000, 250, -500]
+new_balances = [bal * 1.1 if bal <0 else bal for bal in balances ]
+print (new_balances)
+
+#4
+transactions = [1200, 15000, 450, 55000, 800]
+vip_transactions = [bal for bal in transactions if bal > 10000 ]
+print ("Vip_transactions: ", *vip_transactions)
+
+
+
+
+
+
+
+
+
+
+
+
