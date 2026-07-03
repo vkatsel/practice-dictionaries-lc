@@ -68,15 +68,33 @@ TRANSACTIONS_DB = [
 #
 # print(f"Sum :{suma}")
 
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+#
+# average = sum(list(grades.values())) / len(list(grades.values()))
+# print(average)
+#
+# suma = 0
+# for grade in grades:
+#     print(grades[grade])
+# average = suma / len(grades)
+# print(average)
 
-average = sum(list(grades.values())) / len(list(grades.values()))
-print(average)
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
+# total_salary = 0
+# total_emp = 0
+# for key, department in EMPLOYEE_DB.items():
+#     total_emp += len(department)
+#     department_sal = 0
+#
+#     for emp in department:
+#         total_salary += department[emp]["salary"]
+#         department_sal += department[emp]["salary"]
+#     print(f"Average salary for {key}: {department_sal/len(department)}")
+# print(f"Average salary for all dep: {total_salary/total_emp}")
 
-suma = 0
-for grade in grades.values():
-    suma += grade
-average = suma / len(grades)
-print(average)
+EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+remove = EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)
+
 
 
