@@ -58,9 +58,17 @@ RAW_PRICES = [
 # vip_transactions = [transaction*2 if transaction%2==0 else transaction/2 for transaction in transactions if transaction>10000]
 # print(vip_transactions)
 
-
-# cleaned_messages = [ log.replace("ERROR:", " ").strip  for log in SERVER_LOGS if log.startswith("ERROR")]
-# print(cleaned_messages)
+SERVER_LOGS = [
+    "INFO: User logged in",
+    "ERROR: Connection timeout",
+    "DEBUG: Query executed",
+    "ERROR: Database locked",
+    "WARNING: High memory usage",
+    "ERROR: File not found",
+    "INFO: User logged out"
+]
+cleaned_messages = [ log.replace("ERROR:", " ").strip  for log in SERVER_LOGS if log.startswith("ERROR")]
+print(cleaned_messages)
 
 
 RAW_PRICES = [
