@@ -44,9 +44,13 @@ transactions = [1200, 15000, 450, 55000, 800]
 vip_transactions = [bal for bal in transactions if bal > 10000 ]
 print ("Vip_transactions: ", *vip_transactions)
 
+#5
+error_logs = [log[7:] for log in SERVER_LOGS if log.startswith("ERROR:") ]
+print (error_logs)
 
-
-
+#6
+new_prices = [float(price [1:]) for price in RAW_PRICES if price.startswith("$")]
+print (new_prices)
 
 
 
