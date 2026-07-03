@@ -2,6 +2,7 @@
 # ДАНІ ДЛЯ ОБРОБКИ (СПИСКИ РЯДКІВ)
 # Використовується для Практичної №1
 # ==========================================
+from traceback import print_tb
 
 SERVER_LOGS = [
     "INFO: User logged in",
@@ -24,7 +25,8 @@ RAW_PRICES = [
     "$120.00",
     "N/A"
 ]
-
+prices = [float(price[1:]) for price in RAW_PRICES if price.startswith("$")]
+print(prices)
 # Ваш код для завдань нижче:
 #gross_salaries = [15000, 22000, 18500, 31000]
 #net_salaries = [p*0.8 for p in gross_salaries]
