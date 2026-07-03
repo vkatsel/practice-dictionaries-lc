@@ -36,3 +36,19 @@ RAW_PRICES = [
 # clean_names = [names.title() for names in raw_names]
 # print(clean_names)
 
+# balances = [5000, -1000, 250, -500]
+# new_balance = [balances + (balances * 0.1) if balances < 0 else balances
+#                for balances in balances]
+# print(new_balance)
+#
+# status_bank = "good" if sum(balances) > 3000 else "bad"
+# print(f"bank: {status_bank}")
+
+# transactions = [1200, 15000, 450, 55000, 800]
+# vip_transactions = [transactions * 2 if transactions % 2 == 0 else transactions / 2
+#                     for transactions in transactions if transactions > 10000]
+# print(vip_transactions)
+
+# data = [10, -5, 20, -1]
+# clean_data = [0 if x < 0 else x for x in data]
+# print(clean_data)
