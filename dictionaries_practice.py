@@ -2,10 +2,11 @@
 # БАЗА ДАНИХ КОМПАНІЇ (СЛОВНИК)
 # Використовується для Практичної №1
 # ==========================================
+from os import remove
 
 EMPLOYEE_DB = {
     "tech": {
-        "alice": {"role": "Data Scientist", "salary": 4500, "status": "active"},
+        "alice": {"role": "Data Scientist", "salary": [4500,5000,5500], "status": "active"},
         "bob": {"role": "Backend Engineer", "salary": 3800, "status": "active"},
         "charlie": {"role": "DevOps", "salary": 4000, "status": "on_leave"}
     },
@@ -35,3 +36,92 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+
+
+# menu = {"Latte": 60, "Americano": 40}
+# print(f"Americano: {menu['Americano']}")
+# menu["Latte"] = 70
+# menu["Flet-white"] = 65
+# print(f"Updated dict: {menu}")
+# print(f"Cappuccino: {menu.get('Cappuccino', "Undefined")}")
+
+# product = {"name": "Laptop", "price": 1000, "stock": 15}
+# product["price"] *= 1.1
+# product["stock"] -= 1
+# print(f"Updated product: {product}")
+
+# user_profile = {"username": "cinema_fan", "is_premium": True, "discount": 15}
+# user_profile["phone"] = "+380991234567"
+# user_profile["is_premium"] = False
+# removed = user_profile.pop("discount")
+# print(user_profile)
+
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+# print(sum(expenses.values()))
+# suma = 0
+# for expense in expenses.values():
+#     suma += expense
+# print(f"Suma: {suma}")
+
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# print(sum(grades.values())/4)
+
+# print(EMPLOYEE_DB["tech"]["alice"]["salary"][-1])
+
+# total_employee = 0
+# total_salary = 0
+# for key, dept in EMPLOYEE_DB.items():
+#     total_employee += len(dept)
+#     dept_sal = 0
+#
+#     for emloyee in dept:
+#        total_salary += dept[emloyee]["salary"]
+#        dept_sal += dept[emloyee]["salary"]
+#     print(f"Average salary for {key}: {dept_sal/len(dept)}")
+# print(f"Total salary for all dept: {total_salary/total_employee}")
+
+# EMPLOYEE_DB["sales"]["diana"]["salary"] = 3500
+# EMPLOYEE_DB["tech"].pop("charlie")
+# print(EMPLOYEE_DB)
+
+# active_clients = [ transactions for transactions in TRANSACTIONS_DB
+#                    if transactions["status"] == "success"]
+# print(active_clients)
+# big_amount = [a for a in TRANSACTIONS_DB if a["amount"] > 10000]
+# print(big_amount)
+# refund = [t["amount"] for t in TRANSACTIONS_DB if t["category"] == "Refund"]
+# print(refund)
+# incomes = [transactions["amount"] for transactions in TRANSACTIONS_DB
+#            if transactions["status"] == "success"]
+# print(sum(incomes))
+# rej_clients = [transactions["client"] for transactions in TRANSACTIONS_DB
+#                if transactions["status"] == "failed"]
+# print(*rej_clients)
+
+# experiment_json = {
+#   "transactionId": "TXN-8749302-A",
+#   "timestamp": "2026-07-03T12:39:00Z",
+#   "type": "transfer",
+#   "status": "completed",
+#   "source": {
+#     "accountId": "ACC-99482-S",
+#     "accountHolder": "John Doe",
+#     "bank": "Global Trust Bank"
+#   },
+#   "destination": {
+#     "accountId": "ACC-11029-D",
+#     "accountHolder": "Jane Smith",
+#     "bank": "First National Bank"
+#   },
+#   "amount": {
+#     "value": 1500.00,
+#     "currency": "USD"
+#   },
+#   "metadata": {
+#     "description": "Monthly rent payment",
+#     "referenceCode": "RENT-JUL-2026",
+#     "ipAddress": "192.168.1.15"
+#   }
+# }
+
+
