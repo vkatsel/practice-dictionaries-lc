@@ -35,3 +35,16 @@ TRANSACTIONS_DB = [
     {"id": 7, "client": "Grace", "amount": 15000, "category": "Electronics", "status": "success"},
     {"id": 8, "client": "Hank", "amount": -50, "category": "Refund", "status": "failed"},
 ]
+print(EMPLOYEE_DB["tech"]["alice"]["salary"])
+total=0
+count=0
+for department in EMPLOYEE_DB.values():
+    for employee in department.values():
+        total+=employee["salary"]
+        count+=1
+
+print(total/count)
+
+EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+EMPLOYEE_DB["tech"].pop("charlie")
+print(EMPLOYEE_DB)

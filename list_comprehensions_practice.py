@@ -24,3 +24,7 @@ RAW_PRICES = [
 ]
 
 # Ваш код для завдань нижче:
+errors=[p.replace("ERROR: ","") for p in SERVER_LOGS if p.startswith("ERROR:")]
+print(errors)
+prices_text=[p.replace("$", "") for p in RAW_PRICES if p.startswith("$")]
+print(*prices_text)
