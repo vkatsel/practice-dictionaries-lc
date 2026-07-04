@@ -33,15 +33,28 @@ EMPLOYEE_DB = {
 # user_profile["is_premium"]=False
 # user_profile.pop("discount")
 # print(user_profile)
-expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
-suma=0
-for key, value in expenses.items():
-suma=suma+value
-print(suma)
-grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
-total=sum(grades.values())
-average=total/len(grades)
-print(average)
+# expenses = {"Marketing": 5000, "Rent": 2000, "Salaries": 15000}
+# suma=0
+# for key, value in expenses.items():
+# suma=suma+value
+# print(suma)
+# grades = {"Alice": 95, "Bob": 80, "Charlie": 75, "Diana": 90}
+# total=sum(grades.values())
+# average=total/len(grades)
+# print(average)
+alice_salary=EMPLOYEE_DB["tech"]["alice"]["salary"]
+print(alice_salary)
+
+salary_total=0
+
+employee_count=0
+
+for dep in EMPLOYEE_DB.values():
+    for employees in dep.values():
+        salary_total+=employees["salary"]
+        employee_count+=1
+avg=salary_total/employee_count
+print(avg)
 # ==========================================
 # БАЗА ТРАНЗАКЦІЙ ТА КЛІЄНТІВ (СПИСОК СЛОВНИКІВ)
 # Використовується для фінальних завдань
