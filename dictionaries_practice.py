@@ -72,7 +72,7 @@ TRANSACTIONS_DB = [
 ]
 
 
-EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
+# EMPLOYEE_DB["sales"]["diana"]["salary"]=3500
 EMPLOYEE_DB["tech"].pop("charlie")
 print(EMPLOYEE_DB)
 active_clients=[tr["client"] for tr in TRANSACTIONS_DB if tr["status"] == "success"]
